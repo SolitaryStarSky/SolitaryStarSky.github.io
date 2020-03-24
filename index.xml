@@ -5,7 +5,7 @@
     <link>https://SolitaryStarSky.github.io/</link>
     <description>Recent content on 孤星的天空</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-cn</language>
     <lastBuildDate>Tue, 24 Mar 2020 22:50:52 +0800</lastBuildDate>
     
 	<atom:link href="https://SolitaryStarSky.github.io/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,10 @@
     
     <item>
       <title>Blog</title>
-      <link>https://SolitaryStarSky.github.io/post/blog/</link>
+      <link>https://SolitaryStarSky.github.io/2020/03/24/blog/</link>
       <pubDate>Tue, 24 Mar 2020 22:50:52 +0800</pubDate>
       
-      <guid>https://SolitaryStarSky.github.io/post/blog/</guid>
+      <guid>https://SolitaryStarSky.github.io/2020/03/24/blog/</guid>
       <description></description>
     </item>
     
