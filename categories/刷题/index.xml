@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>刷题 on 孤星的天空</title>
+    <link>https://SolitaryStarSky.github.io/categories/%E5%88%B7%E9%A2%98/</link>
+    <description>Recent content in 刷题 on 孤星的天空</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 25 Dec 2019 08:38:47 +0000</lastBuildDate>
+    
+	<atom:link href="https://SolitaryStarSky.github.io/categories/%E5%88%B7%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>poj 1426 Find The Multiple</title>
+      <link>https://SolitaryStarSky.github.io/2019/12/25/poj-1426-Find-The-Multiple/</link>
+      <pubDate>Wed, 25 Dec 2019 08:38:47 +0000</pubDate>
+      
+      <guid>https://SolitaryStarSky.github.io/2019/12/25/poj-1426-Find-The-Multiple/</guid>
+      <description>题意 给你一个数n，你要找出一个只由0和1组成的不超过100位的数，使得该数是n的m倍
+思路 这是一道BFS题，入队的时候有两种情况：一种是10t；一种是10t+1；这题还有个坑点是用C++的STL的队列会T,所以需要自己写一个队列
+题目链接 http://poj.org/problem?id=1426
+代码 #include&amp;lt;iostream&amp;gt;#include&amp;lt;queue&amp;gt;using namespace std; long long a[10000000]; long long bfs(int N) { int front = 0; int rear = 0; a[rear++] = 1; while (front != rear) { long long tmp = a[front++]; if (tmp % N == 0) { return tmp; } a[rear++] = tmp * 10; a[rear++] = tmp * 10 + 1; } return -1; } int main() { int N; while (cin &amp;gt;&amp;gt; N) { if (N == 0)break; cout &amp;lt;&amp;lt; bfs(N) &amp;lt;&amp;lt; endl; } return 0; } </description>
+    </item>
+    
+  </channel>
+</rss>
