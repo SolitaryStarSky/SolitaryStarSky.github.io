@@ -69,6 +69,56 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E9%98%9F%E5%88%97/" title="链式队列">链式队列</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年11月12日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            最近数据结构老师要求我们在上机课上要不看书敲出来链式队列并实现功能，所以在此练练手
+由于比较简单，所以直接上代码
+#include&lt;iostream&gt;using namespace std;typedef int datatype;typedef struct node* pointer;struct node{datatype data;pointer next;};typedef struct{pointer front,rear;}lkqueue;void init_lkqueue(lkqueue *lq){//创建链队列 pointer p;p=new node;p-&gt;next=NULL;lq-&gt;front=p;lq-&gt;rear=p;}void enter_lkqueue(lkqueue *lq,datatype x){//入队功能实现 pointer s;s=new node;s-&gt;data=x;lq-&gt;rear-&gt;next=s;lq-&gt;rear=s;s-&gt;next=NULL;}int empty_lkqueue(lkqueue *lq){//判断队列是否为空 if(lq-&gt;front==lq-&gt;rear)return 1;else return 0;}int out_lkqueue(lkqueue *lq,datatype *x){//出队功能实现 pointer s;if(lq-&gt;front==lq-&gt;rear){cout&lt;&lt;&#34;队空，不能出队!&#34;&lt;&lt;endl;return 0;}s=lq-&gt;front-&gt;next;*x=s-&gt;data;lq-&gt;front-&gt;next=s-&gt;next;cout&lt;&lt;&#34;出队元素为&#34;&lt;&lt;*x&lt;&lt;endl;delete s;return 1;}int main(){lkqueue *lq;lq=new lkqueue;datatype *x;x=new datatype;init_lkqueue(lq);empty_lkqueue(lq);enter_lkqueue(lq,100);empty_lkqueue(lq);out_lkqueue(lq,x);empty_lkqueue(lq);return 0;}……
+        </div>
+        <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E9%98%9F%E5%88%97/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/" title="二叉树的链接结构">二叉树的链接结构</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年11月12日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            对着书本敲了一个钟的二叉树，被二叉树建立时的输入问题困扰了很久。二叉树的建立一般使用递归算法，将所有节点的数据猛的输入，递归无法停止，二叉树就无法建立。 自己对着书本敲了一次也没发现怎么回事，最后看了一篇博文之后，豁然开朗。我们在输入节点数据的时候，必须输入空闲叶子结点，并用特殊符号标记。
+最后自己终于实现了最终的二叉链表的构造及其三种顺序遍历的实现 PS：输入的时候得适当制造一定数量的空节点才能结束二叉树的输入，这个需要个人自己体会。 代码如下：
+#include &lt;iostream&gt;using namespace std;typedef struct node* pointer;typedef char datatype;typedef struct node {datatype data;pointer left, right;}BinTNode;//定义结构体BinTNodetypedef BinTNode* BinTree;//结构体指针BinTreeBinTree Create_Tree()//二叉树的创建{BinTree p;char c;cin &gt;&gt; c;if (c == &#39;#&#39;)//如果遇到字符串&#34;#&#34;，则设该结点值为空	p = NULL;else{p = new node;p-&gt;data = c;p-&gt;left = Create_Tree();p-&gt;right = Create_Tree();}return p;//返回二叉树结构体指针}void preorder(BinTree T) {//先序遍历	if (T !……
+        </div>
+        <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://SolitaryStarSky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/" title="栈实现十进制转换二进制">栈实现十进制转换二进制</a>
             </h1>
         </header>
@@ -238,6 +288,14 @@ inline int gcd(int a,int b){return !b? a:gcd(b,a%b);} inline int lcm(int a,in
 <ul class="widget-list">
     
     <li>
+        <a href="https://SolitaryStarSky.github.io/post/kmp%E7%AE%97%E6%B3%95/" title="KMP算法">KMP算法</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/bf%E7%AE%97%E6%B3%95/" title="BF算法">BF算法</a>
+    </li>
+    
+    <li>
         <a href="https://SolitaryStarSky.github.io/post/7-11%E9%97%AE%E9%A2%98/" title="7 11问题">7 11问题</a>
     </li>
     
@@ -269,14 +327,6 @@ inline int gcd(int a,int b){return !b? a:gcd(b,a%b);} inline int lcm(int a,in
         <a href="https://SolitaryStarSky.github.io/post/%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97/" title="顺序结构循环队列">顺序结构循环队列</a>
     </li>
     
-    <li>
-        <a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E9%98%9F%E5%88%97/" title="链式队列">链式队列</a>
-    </li>
-    
-    <li>
-        <a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/" title="二叉树的链接结构">二叉树的链接结构</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -294,7 +344,7 @@ inline int gcd(int a,int b){return !b? a:gcd(b,a%b);} inline int lcm(int a,in
     
     <li><a href="https://SolitaryStarSky.github.io/categories/%E6%9D%82%E8%B0%88/">杂谈 (1)</a></li>
     
-    <li><a href="https://SolitaryStarSky.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (3)</a></li>
+    <li><a href="https://SolitaryStarSky.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (5)</a></li>
     
 </ul>
     </section>
@@ -304,6 +354,8 @@ inline int gcd(int a,int b){return !b? a:gcd(b,a%b);} inline int lcm(int a,in
 <div class="tagcloud">
     
     <a href="https://SolitaryStarSky.github.io/tags/bfs/">BFS</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E4%B8%B2%E5%8C%B9%E9%85%8D/">串匹配</a>
     
     <a href="https://SolitaryStarSky.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
     

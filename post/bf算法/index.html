@@ -6,21 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>二叉树 | 孤星的天空的博客</title>
-    <meta property="og:title" content="二叉树 - 孤星的天空的博客">
+    <title>BF算法 | 孤星的天空的博客</title>
+    <meta property="og:title" content="BF算法 - 孤星的天空的博客">
     <meta property="og:type" content="article">
         
+    <meta property="article:published_time" content='2020-03-25T18:22:09&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-03-25T18:22:09&#43;08:00'>
         
     <meta name="Keywords" content="孤星的天空，博客，游戏开发，C&#43;&#43;语言学习，算法">
-    <meta name="description" content="二叉树">
+    <meta name="description" content="BF算法">
         
     <meta name="author" content="孤星的天空">
-    <meta property="og:url" content="https://SolitaryStarSky.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+    <meta property="og:url" content="https://SolitaryStarSky.github.io/post/bf%E7%AE%97%E6%B3%95/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml+xml" href="https://SolitaryStarSky.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/index.xml" title="孤星的天空的博客" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -45,7 +48,7 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="https://SolitaryStarSky.github.io">首页</a>
+                    <a class="current" href="https://SolitaryStarSky.github.io">首页</a>
                     
                     <a  href="https://SolitaryStarSky.github.io/books/" title="新书">新书</a>
                     
@@ -67,71 +70,97 @@
                     
 <div class="res-cons">
     
-    <h3 class="archive-title">
-        包含标签
-        <span class="keyword">二叉树</span>
-        的文章
-    </h3>
-    
-
-    
     <article class="post">
         <header>
-            <h1 class="post-title">
-                <a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E7%94%9F%E6%88%90/">二叉树的层序生成</a>
-            </h1>
+            <h1 class="post-title">BF算法</h1>
         </header>
         <date class="post-meta meta-date">
-            2019年11月23日
+            2020年3月25日
         </date>
         
-        <div class="post-meta meta-category">
-            |
+        <div class="post-meta">
+            <span>|</span>
             
-            <a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a>
+            <span class="meta-category"><a href='https://SolitaryStarSky.github.io/categories/%E7%AE%97%E6%B3%95'>算法</a></span>
             
         </div>
         
+        
+        
         <div class="post-content">
-            算法的基本思想：依次输入结点信息，若输入的结点不是虚结点，则建立一个新结点；若新结点是第1个结点，则令其为根节点；否则将新结点作为孩子链接到它的双亲结点上。如此重复下去，直到输入字符“#”为止
-核心代码：
-Bitree level_create(){ char ch; pointer Q[maxsize+1]; int front,rear; pointer root,s; root=NULL; front=rear=0; while(cin&gt;&gt;ch,ch!=&#39;#&#39;){ if(ch!=&#39;@&#39;){ s=new node; s-&gt;data=ch; s-&gt;lchild=s-&gt;rchild=NULL; } else s=NULL; rear++;//不管结点是否为虚，都要入队  Q[rear]=s; if(rear==1){//第一个结点是根，要修改头指针，它不是孩子  root=s; front=1; } else{ if(s&amp;&amp;Q[front]){ if(rear%2==0)Q[front]-&gt;lchild=s; else Q[front]-&gt;rchild=s; } if(rear%2==1)front++;//不论是否为虚，右孩子入队后，双亲出队  } } return root; } ……
-            <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E7%94%9F%E6%88%90/">阅读全文</a></p>
+            <h3 id="bf算法">BF算法</h3>
+<p>BF算法又称朴素的模式匹配算法，属于串匹配中的暴力法</p>
+<p>即在S的所有字符中逐个匹配P的每个字符。</p>
+<h3 id="局限性">局限性</h3>
+<p>如果情况最坏的时候，假设在一个长度为n的文本串中查找一个长度为m的模式串，则需要匹配n*m次。复杂度将会由O（m+n）退化到O（mn）</p>
+<h3 id="核心代码">核心代码</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">BF</span>(string s, string p) {
+    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>,sum<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,ans<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;<span style="color:#75715e">//i记录文本串位置，j记录模式串位置，count统计该趟匹配次数,sum统计总判断次数，ans统计匹配轮数
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span> (i <span style="color:#f92672">&lt;</span> s.size()) {
+        <span style="color:#66d9ef">if</span> (s.at(i) <span style="color:#f92672">==</span> p.at(j)) {<span style="color:#75715e">//匹配成功，下一位
+</span><span style="color:#75715e"></span>            i<span style="color:#f92672">++</span>;
+            j<span style="color:#f92672">++</span>;
+            count<span style="color:#f92672">++</span>;
+            sum<span style="color:#f92672">++</span>;
+        }
+        <span style="color:#66d9ef">else</span> {<span style="color:#75715e">//匹配失败 j回溯，i回滚起始的下一位
+</span><span style="color:#75715e"></span>            i<span style="color:#f92672">=</span>i<span style="color:#f92672">-</span>count<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;
+            j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+            count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+            sum<span style="color:#f92672">++</span>;
+            ans<span style="color:#f92672">++</span>;
+        }
+        <span style="color:#66d9ef">if</span> (count <span style="color:#f92672">==</span> p.size()) {
+            ans<span style="color:#f92672">++</span>;
+            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;模式匹配成功，共走了&#34;</span> <span style="color:#f92672">&lt;&lt;</span> ans <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;轮&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;判断了&#34;</span> <span style="color:#f92672">&lt;&lt;</span> sum <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;次&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+            <span style="color:#66d9ef">return</span>;
+        }
+    }
+     cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;匹配失败&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+     cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;判断了&#34;</span> <span style="color:#f92672">&lt;&lt;</span> sum <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;次&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+}
+</code></pre></div>
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/7-11%E9%97%AE%E9%A2%98/">7 11问题</a></li>
+        
+        <li><a href="/post/poj-1426-find-the-multiple/">poj 1426 Find The Multiple</a></li>
+        
+        <li><a href="/post/bfs%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">BFS————广度优先搜索</a></li>
+        
+        <li><a href="/post/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">归并排序</a></li>
+        
+        <li><a href="/post/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%85%B6%E7%94%9F%E6%88%90/">哈夫曼树及其生成</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://SolitaryStarSky.github.io/tags/%E4%B8%B2%E5%8C%B9%E9%85%8D'>串匹配</a></li>
+                
+            </ul>
+            
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/">二叉树的链接结构</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2019年11月12日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a>
-            
-        </div>
-        
-        <div class="post-content">
-            对着书本敲了一个钟的二叉树，被二叉树建立时的输入问题困扰了很久。二叉树的建立一般使用递归算法，将所有节点的数据猛的输入，递归无法停止，二叉树就无法建立。 自己对着书本敲了一次也没发现怎么回事，最后看了一篇博文之后，豁然开朗。我们在输入节点数据的时候，必须输入空闲叶子结点，并用特殊符号标记。
-最后自己终于实现了最终的二叉链表的构造及其三种顺序遍历的实现 PS：输入的时候得适当制造一定数量的空节点才能结束二叉树的输入，这个需要个人自己体会。 代码如下：
-#include &lt;iostream&gt;using namespace std;typedef struct node* pointer;typedef char datatype;typedef struct node {datatype data;pointer left, right;}BinTNode;//定义结构体BinTNodetypedef BinTNode* BinTree;//结构体指针BinTreeBinTree Create_Tree()//二叉树的创建{BinTree p;char c;cin &gt;&gt; c;if (c == &#39;#&#39;)//如果遇到字符串&#34;#&#34;，则设该结点值为空	p = NULL;else{p = new node;p-&gt;data = c;p-&gt;left = Create_Tree();p-&gt;right = Create_Tree();}return p;//返回二叉树结构体指针}void preorder(BinTree T) {//先序遍历	if (T !……
-            <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/">阅读全文</a></p>
-        </div>
-    </article>
     
 
     
-
-
-
-
-
+    
 </div>
 
                 </div>
@@ -277,6 +306,17 @@ Bitree level_create(){ char ch; pointer Q[maxsize+1]; int front,rear; pointer ro
     </div>
 </footer>
 
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 
 <a id="rocket" href="#top"></a>

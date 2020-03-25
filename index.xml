@@ -6,10 +6,38 @@
     <description>Recent content on 孤星的天空的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 25 Mar 2020 17:17:09 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 25 Mar 2020 23:46:13 +0800</lastBuildDate>
     
 	<atom:link href="https://SolitaryStarSky.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>KMP算法</title>
+      <link>https://SolitaryStarSky.github.io/post/kmp%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Wed, 25 Mar 2020 23:46:13 +0800</pubDate>
+      
+      <guid>https://SolitaryStarSky.github.io/post/kmp%E7%AE%97%E6%B3%95/</guid>
+      <description>快速认识KMP算法 阮一峰老师带你认识KMP算法
+从头到尾彻底理解KMP
+浅谈我对KMP中next数组的认识与理解 next数组是因为总是要找失配字符的上一位字符不方便而产生的
+next数组的出现使得只用找失配字符对应的next值即为失配字符的上一位字符的最大长度值
+ 根据《最大长度表》，失配时，模式串向右移动的位数 = 已经匹配的字符数 - 失配字符的上一位字符的最大长度值 而根据《next 数组》，失配时，模式串向右移动的位数 = 失配字符的位置 - 失配字符对应的next 值  有上述得匹配的字符数=失配字符的位置，失配字符的上一位字符的最大长度值=失配字符对应的next 值
+next数组与最大长度表都是对模式串特征的一种映射，使得不需要像BF算法那样匹配多次，相同部分可以跳过
+next数组的第一位为何是-1 由于第一位匹配就失配时，默认向右移动1位，即模式串向右移动的位数=1，此时失配字符的位置=0，代入（模式串向右移动的位数 = 失配字符的位置 - 失配字符对应的next 值）改式之中，即可解得next值为-1
+next数组核心代码 //优化过后的next 数组求法 void GetNextval(char* p, int next[]) { int pLen = strlen(p); next[0] = -1; int k = -1; int j = 0; while (j &amp;lt; pLen - 1) { //p[k]表示前缀，p[j]表示后缀 	if (k == -1 || p[j] == p[k]) { ++j; ++k; //较之前next数组求法，改动在下面4行 	if (p[j] !</description>
+    </item>
+    
+    <item>
+      <title>BF算法</title>
+      <link>https://SolitaryStarSky.github.io/post/bf%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Wed, 25 Mar 2020 18:22:09 +0800</pubDate>
+      
+      <guid>https://SolitaryStarSky.github.io/post/bf%E7%AE%97%E6%B3%95/</guid>
+      <description>BF算法 BF算法又称朴素的模式匹配算法，属于串匹配中的暴力法
+即在S的所有字符中逐个匹配P的每个字符。
+局限性 如果情况最坏的时候，假设在一个长度为n的文本串中查找一个长度为m的模式串，则需要匹配n*m次。复杂度将会由O（m+n）退化到O（mn）
+核心代码 void BF(string s, string p) { int i = 0, j = 0, count = 0,sum=0,ans=0;//i记录文本串位置，j记录模式串位置，count统计该趟匹配次数,sum统计总判断次数，ans统计匹配轮数  while (i &amp;lt; s.size()) { if (s.at(i) == p.at(j)) {//匹配成功，下一位  i++; j++; count++; sum++; } else {//匹配失败 j回溯，i回滚起始的下一位  i=i-count+1; j = 0; count = 0; sum++; ans++; } if (count == p.size()) { ans++; cout &amp;lt;&amp;lt; &amp;#34;模式匹配成功，共走了&amp;#34; &amp;lt;&amp;lt; ans &amp;lt;&amp;lt; &amp;#34;轮&amp;#34; &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; &amp;#34;判断了&amp;#34; &amp;lt;&amp;lt; sum &amp;lt;&amp;lt; &amp;#34;次&amp;#34; &amp;lt;&amp;lt; endl; return; } } cout &amp;lt;&amp;lt; &amp;#34;匹配失败&amp;#34; &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; &amp;#34;判断了&amp;#34; &amp;lt;&amp;lt; sum &amp;lt;&amp;lt; &amp;#34;次&amp;#34; &amp;lt;&amp;lt; endl; } </description>
+    </item>
     
     <item>
       <title>7 11问题</title>

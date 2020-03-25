@@ -69,6 +69,62 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://SolitaryStarSky.github.io/post/kmp%E7%AE%97%E6%B3%95/" title="KMP算法">KMP算法</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年3月25日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://SolitaryStarSky.github.io/categories/%E7%AE%97%E6%B3%95'>算法</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            快速认识KMP算法 阮一峰老师带你认识KMP算法
+从头到尾彻底理解KMP
+浅谈我对KMP中next数组的认识与理解 next数组是因为总是要找失配字符的上一位字符不方便而产生的
+next数组的出现使得只用找失配字符对应的next值即为失配字符的上一位字符的最大长度值
+ 根据《最大长度表》，失配时，模式串向右移动的位数 = 已经匹配的字符数 - 失配字符的上一位字符的最大长度值 而根据《next 数组》，失配时，模式串向右移动的位数 = 失配字符的位置 - 失配字符对应的next 值  有上述得匹配的字符数=失配字符的位置，失配字符的上一位字符的最大长度值=失配字符对应的next 值
+next数组与最大长度表都是对模式串特征的一种映射，使得不需要像BF算法那样匹配多次，相同部分可以跳过
+next数组的第一位为何是-1 由于第一位匹配就失配时，默认向右移动1位，即模式串向右移动的位数=1，此时失配字符的位置=0，代入（模式串向右移动的位数 = 失配字符的位置 - 失配字符对应的next 值）改式之中，即可解得next值为-1
+next数组核心代码 //优化过后的next 数组求法 void GetNextval(char* p, int next[]) { int pLen = strlen(p); next[0] = -1; int k = -1; int j = 0; while (j &lt; pLen - 1) { //p[k]表示前缀，p[j]表示后缀 	if (k == -1 || p[j] == p[k]) { ++j; ++k; //较之前next数组求法，改动在下面4行 	if (p[j] !……
+        </div>
+        <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/kmp%E7%AE%97%E6%B3%95/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://SolitaryStarSky.github.io/post/bf%E7%AE%97%E6%B3%95/" title="BF算法">BF算法</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年3月25日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://SolitaryStarSky.github.io/categories/%E7%AE%97%E6%B3%95'>算法</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            BF算法 BF算法又称朴素的模式匹配算法，属于串匹配中的暴力法
+即在S的所有字符中逐个匹配P的每个字符。
+局限性 如果情况最坏的时候，假设在一个长度为n的文本串中查找一个长度为m的模式串，则需要匹配n*m次。复杂度将会由O（m+n）退化到O（mn）
+核心代码 void BF(string s, string p) { int i = 0, j = 0, count = 0,sum=0,ans=0;//i记录文本串位置，j记录模式串位置，count统计该趟匹配次数,sum统计总判断次数，ans统计匹配轮数  while (i &lt; s.size()) { if (s.at(i) == p.at(j)) {//匹配成功，下一位  i++; j++; count++; sum++; } else {//匹配失败 j回溯，i回滚起始的下一位  i=i-count+1; j = 0; count = 0; sum++; ans++; } if (count == p.size()) { ans++; cout &lt;&lt; &#34;模式匹配成功，共走了&#34; &lt;&lt; ans &lt;&lt; &#34;轮&#34; &lt;&lt; endl; cout &lt;&lt; &#34;判断了&#34; &lt;&lt; sum &lt;&lt; &#34;次&#34; &lt;&lt; endl; return; } } cout &lt;&lt; &#34;匹配失败&#34; &lt;&lt; endl; cout &lt;&lt; &#34;判断了&#34; &lt;&lt; sum &lt;&lt; &#34;次&#34; &lt;&lt; endl; } ……
+        </div>
+        <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/bf%E7%AE%97%E6%B3%95/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://SolitaryStarSky.github.io/post/7-11%E9%97%AE%E9%A2%98/" title="7 11问题">7 11问题</a>
             </h1>
         </header>
@@ -271,56 +327,6 @@ Bitree level_create(){ char ch; pointer Q[maxsize+1]; int front,rear; pointer ro
         <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97/">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E9%98%9F%E5%88%97/" title="链式队列">链式队列</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2019年11月12日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            最近数据结构老师要求我们在上机课上要不看书敲出来链式队列并实现功能，所以在此练练手
-由于比较简单，所以直接上代码
-#include&lt;iostream&gt;using namespace std;typedef int datatype;typedef struct node* pointer;struct node{datatype data;pointer next;};typedef struct{pointer front,rear;}lkqueue;void init_lkqueue(lkqueue *lq){//创建链队列 pointer p;p=new node;p-&gt;next=NULL;lq-&gt;front=p;lq-&gt;rear=p;}void enter_lkqueue(lkqueue *lq,datatype x){//入队功能实现 pointer s;s=new node;s-&gt;data=x;lq-&gt;rear-&gt;next=s;lq-&gt;rear=s;s-&gt;next=NULL;}int empty_lkqueue(lkqueue *lq){//判断队列是否为空 if(lq-&gt;front==lq-&gt;rear)return 1;else return 0;}int out_lkqueue(lkqueue *lq,datatype *x){//出队功能实现 pointer s;if(lq-&gt;front==lq-&gt;rear){cout&lt;&lt;&#34;队空，不能出队!&#34;&lt;&lt;endl;return 0;}s=lq-&gt;front-&gt;next;*x=s-&gt;data;lq-&gt;front-&gt;next=s-&gt;next;cout&lt;&lt;&#34;出队元素为&#34;&lt;&lt;*x&lt;&lt;endl;delete s;return 1;}int main(){lkqueue *lq;lq=new lkqueue;datatype *x;x=new datatype;init_lkqueue(lq);empty_lkqueue(lq);enter_lkqueue(lq,100);empty_lkqueue(lq);out_lkqueue(lq,x);empty_lkqueue(lq);return 0;}……
-        </div>
-        <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E9%98%9F%E5%88%97/">阅读全文</a></p>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/" title="二叉树的链接结构">二叉树的链接结构</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2019年11月12日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            对着书本敲了一个钟的二叉树，被二叉树建立时的输入问题困扰了很久。二叉树的建立一般使用递归算法，将所有节点的数据猛的输入，递归无法停止，二叉树就无法建立。 自己对着书本敲了一次也没发现怎么回事，最后看了一篇博文之后，豁然开朗。我们在输入节点数据的时候，必须输入空闲叶子结点，并用特殊符号标记。
-最后自己终于实现了最终的二叉链表的构造及其三种顺序遍历的实现 PS：输入的时候得适当制造一定数量的空节点才能结束二叉树的输入，这个需要个人自己体会。 代码如下：
-#include &lt;iostream&gt;using namespace std;typedef struct node* pointer;typedef char datatype;typedef struct node {datatype data;pointer left, right;}BinTNode;//定义结构体BinTNodetypedef BinTNode* BinTree;//结构体指针BinTreeBinTree Create_Tree()//二叉树的创建{BinTree p;char c;cin &gt;&gt; c;if (c == &#39;#&#39;)//如果遇到字符串&#34;#&#34;，则设该结点值为空	p = NULL;else{p = new node;p-&gt;data = c;p-&gt;left = Create_Tree();p-&gt;right = Create_Tree();}return p;//返回二叉树结构体指针}void preorder(BinTree T) {//先序遍历	if (T !……
-        </div>
-        <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -366,6 +372,14 @@ Bitree level_create(){ char ch; pointer Q[maxsize+1]; int front,rear; pointer ro
 <ul class="widget-list">
     
     <li>
+        <a href="https://SolitaryStarSky.github.io/post/kmp%E7%AE%97%E6%B3%95/" title="KMP算法">KMP算法</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/bf%E7%AE%97%E6%B3%95/" title="BF算法">BF算法</a>
+    </li>
+    
+    <li>
         <a href="https://SolitaryStarSky.github.io/post/7-11%E9%97%AE%E9%A2%98/" title="7 11问题">7 11问题</a>
     </li>
     
@@ -397,14 +411,6 @@ Bitree level_create(){ char ch; pointer Q[maxsize+1]; int front,rear; pointer ro
         <a href="https://SolitaryStarSky.github.io/post/%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97/" title="顺序结构循环队列">顺序结构循环队列</a>
     </li>
     
-    <li>
-        <a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E9%98%9F%E5%88%97/" title="链式队列">链式队列</a>
-    </li>
-    
-    <li>
-        <a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/" title="二叉树的链接结构">二叉树的链接结构</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -422,7 +428,7 @@ Bitree level_create(){ char ch; pointer Q[maxsize+1]; int front,rear; pointer ro
     
     <li><a href="https://SolitaryStarSky.github.io/categories/%E6%9D%82%E8%B0%88/">杂谈 (1)</a></li>
     
-    <li><a href="https://SolitaryStarSky.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (3)</a></li>
+    <li><a href="https://SolitaryStarSky.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (5)</a></li>
     
 </ul>
     </section>
@@ -432,6 +438,8 @@ Bitree level_create(){ char ch; pointer Q[maxsize+1]; int front,rear; pointer ro
 <div class="tagcloud">
     
     <a href="https://SolitaryStarSky.github.io/tags/bfs/">BFS</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E4%B8%B2%E5%8C%B9%E9%85%8D/">串匹配</a>
     
     <a href="https://SolitaryStarSky.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
     
