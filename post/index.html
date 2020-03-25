@@ -71,6 +71,37 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://SolitaryStarSky.github.io/post/7-11%E9%97%AE%E9%A2%98/" title="7 11问题">7 11问题</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年3月25日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://SolitaryStarSky.github.io/categories/%E6%9D%82%E8%B0%88'>杂谈</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            7-11问题 一位顾客在7-11买了4件商品，这4件商品相乘的价格是7.11元，相加的价格也是7.11元，请用蛮力法编写程序，输出这4件商品的价格分别是多少。
+思路：蛮力（暴力）法 约束条件就2个，a+b+c+d=7.11，abcd=7.11。写3个for循环遍历出所有答案即可
+坑点：C/C++浮点数误差分析 如上图，C语言的浮点数是有一定误差的，在误差范围内，我们一般默认实际值为正确答案
+难点： 本题难点就在于如何解决该误差
+方法1： 避免浮点数的计算
+#include&lt;iostream&gt;#include&lt;math.h&gt;using namespace std; /*711000000*/ /*2147483648*/ int main() { double a,b,c,d; cout&lt;&lt;&#34;a\tb\tc\td&#34;&lt;&lt;endl;	for(a=1;a&lt;711;a++) for(b=1;b&lt;711;b++) for(c=1;c&lt;711;c++) { d=711-(a+b+c); if(a*b*c*d==711000000) { cout&lt;&lt;a/100&lt;&lt;&#34;\t&#34;&lt;&lt;b/100&lt;&lt;&#34;\t&#34;&lt;&lt;c/100&lt;&lt;&#34;\t&#34;&lt;&lt;d/100&lt;&lt;endl; } } return 0; } 方法2： 标明精度进行运算
+#include&lt;iostream&gt;#include&lt;math.h&gt;using namespace std; /*711000000*/ /*2147483648*/ int main() { double a,b,c,d; cout&lt;&lt;&#34;a\tb\tc\td&#34;&lt;&lt;endl;	for(a=0.01;a&lt;7.11;a=a+0.01) for(b=0.01;b&lt;7.11;b=b+0.01) for(c=0.01;c&lt;7.11;c=c+0.01) { d=7.11-(a+b+c); if(fabs(a*b*c*d-7.11)&lt;10e-8) { cout&lt;&lt;a&lt;&lt;&#34;\t&#34;&lt;&lt;b&lt;&lt;&#34;\t&#34;&lt;&lt;c&lt;&lt;&#34;\t&#34;&lt;&lt;d&lt;&lt;endl; } } return 0; }  ……
+        </div>
+        <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/7-11%E9%97%AE%E9%A2%98/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://SolitaryStarSky.github.io/post/poj-1426-find-the-multiple/" title="poj 1426 Find The Multiple">poj 1426 Find The Multiple</a>
             </h1>
         </header>
@@ -312,32 +343,6 @@ Bitree level_create(){ char ch; pointer Q[maxsize+1]; int front,rear; pointer ro
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://SolitaryStarSky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/" title="栈实现十进制转换二进制">栈实现十进制转换二进制</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2019年10月17日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            思路分析： 只需要用一个变量来存储余数，并入栈即可。另外需要注意一下maxsize-1才是栈满；p.data[p.top]代表的是datatype x的值。 下面是代码实现：
-#include &lt;iostream&gt;using namespace std;const int maxsize = 16;typedef int datatype;typedef struct {datatype data[maxsize];int top;}sqstack;void init_sqstack(sqstack* sq) {sq-&gt;top = -1;}int empty_sqstack(sqstack* sq) {if (sq-&gt;top == -1)return 1;else return 0;}int push_sqstack(sqstack* sq, datatype x) {if (sq-&gt;top == maxsize - 1) {cout &lt;&lt; &#34;栈满，不能进栈！\n&#34;;return 0;}sq-&gt;data[++sq-&gt;top] = x;return 1;}int pop_sqstack(sqstack* sq, datatype* x) {if (sq-&gt;top == -1) {cout &lt;&lt; &#34;栈空，不能退栈!……
-        </div>
-        <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/">阅读全文</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -382,6 +387,10 @@ Bitree level_create(){ char ch; pointer Q[maxsize+1]; int front,rear; pointer ro
 <ul class="widget-list">
     
     <li>
+        <a href="https://SolitaryStarSky.github.io/post/7-11%E9%97%AE%E9%A2%98/" title="7 11问题">7 11问题</a>
+    </li>
+    
+    <li>
         <a href="https://SolitaryStarSky.github.io/post/poj-1426-find-the-multiple/" title="poj 1426 Find The Multiple">poj 1426 Find The Multiple</a>
     </li>
     
@@ -417,10 +426,6 @@ Bitree level_create(){ char ch; pointer Q[maxsize+1]; int front,rear; pointer ro
         <a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/" title="二叉树的链接结构">二叉树的链接结构</a>
     </li>
     
-    <li>
-        <a href="https://SolitaryStarSky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/" title="栈实现十进制转换二进制">栈实现十进制转换二进制</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -435,6 +440,8 @@ Bitree level_create(){ char ch; pointer Q[maxsize+1]; int front,rear; pointer ro
     <li><a href="https://SolitaryStarSky.github.io/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E9%A1%B9/">数学杂项 (1)</a></li>
     
     <li><a href="https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构 (9)</a></li>
+    
+    <li><a href="https://SolitaryStarSky.github.io/categories/%E6%9D%82%E8%B0%88/">杂谈 (1)</a></li>
     
     <li><a href="https://SolitaryStarSky.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (3)</a></li>
     
@@ -456,6 +463,8 @@ Bitree level_create(){ char ch; pointer Q[maxsize+1]; int front,rear; pointer ro
     <a href="https://SolitaryStarSky.github.io/tags/%E6%A0%88/">栈</a>
     
     <a href="https://SolitaryStarSky.github.io/tags/%E6%A0%91/">树</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E7%AE%97%E6%B3%95%E8%AF%BE%E4%B9%A0%E9%A2%98/">算法课习题</a>
     
     <a href="https://SolitaryStarSky.github.io/tags/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F/">链式前向星</a>
     

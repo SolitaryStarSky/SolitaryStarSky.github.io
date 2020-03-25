@@ -6,24 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>链式前向星 | 孤星的天空的博客</title>
-    <meta property="og:title" content="链式前向星 - 孤星的天空的博客">
+    <title>杂谈 | 孤星的天空的博客</title>
+    <meta property="og:title" content="杂谈 - 孤星的天空的博客">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2019-11-21T09:00:39&#43;08:00'>
-        
-        
-    <meta property="article:modified_time" content='2019-11-21T09:00:39&#43;08:00'>
         
     <meta name="Keywords" content="孤星的天空，博客，游戏开发，C&#43;&#43;语言学习，算法">
-    <meta name="description" content="链式前向星">
+    <meta name="description" content="杂谈">
         
     <meta name="author" content="孤星的天空">
-    <meta property="og:url" content="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F/">
+    <meta property="og:url" content="https://SolitaryStarSky.github.io/categories/%E6%9D%82%E8%B0%88/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
+    <link rel="alternate" type="application/rss+xml+xml" href="https://SolitaryStarSky.github.io/categories/%E6%9D%82%E8%B0%88/index.xml" title="孤星的天空的博客" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -48,7 +45,7 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="current" href="https://SolitaryStarSky.github.io">首页</a>
+                    <a class="" href="https://SolitaryStarSky.github.io">首页</a>
                     
                     <a  href="https://SolitaryStarSky.github.io/books/" title="新书">新书</a>
                     
@@ -70,95 +67,50 @@
                     
 <div class="res-cons">
     
+    <h3 class="archive-title">
+        分类
+        <span class="keyword">杂谈</span>
+        中的文章
+    </h3>
+    
+
+    
     <article class="post">
         <header>
-            <h1 class="post-title">链式前向星</h1>
+            <h1 class="post-title">
+                <a href="https://SolitaryStarSky.github.io/post/7-11%E9%97%AE%E9%A2%98/">7 11问题</a>
+            </h1>
         </header>
         <date class="post-meta meta-date">
-            2019年11月21日
+            2020年3月25日
         </date>
         
-        <div class="post-meta">
-            <span>|</span>
+        <div class="post-meta meta-category">
+            |
             
-            <span class="meta-category"><a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a></span>
+            <a href='https://SolitaryStarSky.github.io/categories/%E6%9D%82%E8%B0%88'>杂谈</a>
             
         </div>
-        
-        
         
         <div class="post-content">
-            <p>在学习算法spfa的过程之中，其代码的实现过程是用了链式前向星结构实现，因此了解并学习了一下链式前向星</p>
-<h2 id="什么是链式前向星">什么是链式前向星</h2>
-<p>前向星的本质其实是静态链表，如果说邻接表存的是点的集合，那么链式前向星是存的是边的集合。</p>
-<h2 id="为什么要采用链式前向星">为什么要采用链式前向星</h2>
-<p>如果说邻接表是不好写但效率好，邻接矩阵是好写但效率低的话，前向星就是一个相对中庸的数据结构。前向星固然好些，但效率并不高。而在优化为链式前向星后，效率也得到了较大的提升。虽然说，世界上对链式前向星的使用并不是很广泛，但在不愿意写复杂的邻接表的情况下，链式前向星也是一个很优秀的数据结构。</p>
-<h2 id="主要代码实现">主要代码实现</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Edge</span>
-{
-	<span style="color:#66d9ef">int</span> next;<span style="color:#75715e">//下一条边的编号 
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">int</span> to;<span style="color:#75715e">//这条边到达的点 
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">int</span> dis;<span style="color:#75715e">//这条边的长度 
-</span><span style="color:#75715e"></span>}edge[maxm];
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add_edge</span>(<span style="color:#66d9ef">int</span> from,<span style="color:#66d9ef">int</span> to,<span style="color:#66d9ef">int</span> dis) <span style="color:#75715e">//加入一条从from到to距离为dis的单向边 
-</span><span style="color:#75715e"></span>{
-	edge[<span style="color:#f92672">++</span>num_edge].next<span style="color:#f92672">=</span>head[from]; 
-	edge[num_edge].to<span style="color:#f92672">=</span>to;<span style="color:#75715e">//将to记录 
-</span><span style="color:#75715e"></span>	edge[num_edge].dis<span style="color:#f92672">=</span>dis;<span style="color:#75715e">//将dis记录 
-</span><span style="color:#75715e"></span>	head[from]<span style="color:#f92672">=</span>num_edge;<span style="color:#75715e">// 
-</span><span style="color:#75715e"></span>}
-
-</code></pre></div><h2 id="headi数组与next">head[i]数组与next</h2>
-<p>关于head[i]的含义，我们理解为指向 i 结点的第一条边。这是方便于我们在接下来调用的时候能够完好的访问：i结点第一条边通过head访问，剩下的边通过next指针指向。</p>
-<p>总的来说：
-head[i]来指向 i 结点的第一条边
-next指向下一条边</p>
-<h2 id="调用核心代码">调用核心代码</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>head[k];i<span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">=</span>edge[i].next)
-</code></pre></div>
-        </div>
-
-        
-
-
-        
-
-<div class="post-archive">
-    <h2>See Also</h2>
-    <ul class="listing">
-        
-        <li><a href="/post/%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97/">顺序结构循环队列</a></li>
-        
-        <li><a href="/post/%E9%93%BE%E5%BC%8F%E9%98%9F%E5%88%97/">链式队列</a></li>
-        
-        <li><a href="/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/">二叉树的链接结构</a></li>
-        
-        <li><a href="/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/">栈实现十进制转换二进制</a></li>
-        
-        <li><a href="/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E6%8B%AC%E5%8F%B7%E5%8C%B9%E9%85%8D/">栈实现括号匹配</a></li>
-        
-    </ul>
-</div>
-
-
-        <div class="post-meta meta-tags">
-            
-            <ul class="clearfix">
-                
-                <li><a href='https://SolitaryStarSky.github.io/tags/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F'>链式前向星</a></li>
-                
-                <li><a href='https://SolitaryStarSky.github.io/tags/%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8'>静态链表</a></li>
-                
-            </ul>
-            
+            7-11问题 一位顾客在7-11买了4件商品，这4件商品相乘的价格是7.11元，相加的价格也是7.11元，请用蛮力法编写程序，输出这4件商品的价格分别是多少。
+思路：蛮力（暴力）法 约束条件就2个，a+b+c+d=7.11，abcd=7.11。写3个for循环遍历出所有答案即可
+坑点：C/C++浮点数误差分析 如上图，C语言的浮点数是有一定误差的，在误差范围内，我们一般默认实际值为正确答案
+难点： 本题难点就在于如何解决该误差
+方法1： 避免浮点数的计算
+#include&lt;iostream&gt;#include&lt;math.h&gt;using namespace std; /*711000000*/ /*2147483648*/ int main() { double a,b,c,d; cout&lt;&lt;&#34;a\tb\tc\td&#34;&lt;&lt;endl;	for(a=1;a&lt;711;a++) for(b=1;b&lt;711;b++) for(c=1;c&lt;711;c++) { d=711-(a+b+c); if(a*b*c*d==711000000) { cout&lt;&lt;a/100&lt;&lt;&#34;\t&#34;&lt;&lt;b/100&lt;&lt;&#34;\t&#34;&lt;&lt;c/100&lt;&lt;&#34;\t&#34;&lt;&lt;d/100&lt;&lt;endl; } } return 0; } 方法2： 标明精度进行运算
+#include&lt;iostream&gt;#include&lt;math.h&gt;using namespace std; /*711000000*/ /*2147483648*/ int main() { double a,b,c,d; cout&lt;&lt;&#34;a\tb\tc\td&#34;&lt;&lt;endl;	for(a=0.01;a&lt;7.11;a=a+0.01) for(b=0.01;b&lt;7.11;b=b+0.01) for(c=0.01;c&lt;7.11;c=c+0.01) { d=7.11-(a+b+c); if(fabs(a*b*c*d-7.11)&lt;10e-8) { cout&lt;&lt;a&lt;&lt;&#34;\t&#34;&lt;&lt;b&lt;&lt;&#34;\t&#34;&lt;&lt;c&lt;&lt;&#34;\t&#34;&lt;&lt;d&lt;&lt;endl; } } return 0; }  ……
+            <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/7-11%E9%97%AE%E9%A2%98/">阅读全文</a></p>
         </div>
     </article>
     
-    
 
     
-    
+
+
+
+
+
 </div>
 
                 </div>
@@ -302,17 +254,6 @@ next指向下一条边</p>
     </div>
 </footer>
 
-
-    
-    <script type="text/javascript">
-        window.MathJax = {
-            tex2jax: {
-                inlineMath: [['$', '$']],
-                processEscapes: true
-                }
-            };
-    </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 
 <a id="rocket" href="#top"></a>
