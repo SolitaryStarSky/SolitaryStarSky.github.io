@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on 孤星的天空</title>
+    <title>Categories on 飞雪无情的博客</title>
     <link>https://SolitaryStarSky.github.io/categories/</link>
-    <description>Recent content in Categories on 孤星的天空</description>
+    <description>Recent content in Categories on 飞雪无情的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>zh-CN</language>
     <lastBuildDate>Wed, 25 Dec 2019 08:38:47 +0000</lastBuildDate>
     
 	<atom:link href="https://SolitaryStarSky.github.io/categories/index.xml" rel="self" type="application/rss+xml" />

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on 孤星的天空</title>
+    <title>Tags on 飞雪无情的博客</title>
     <link>https://SolitaryStarSky.github.io/tags/</link>
-    <description>Recent content in Tags on 孤星的天空</description>
+    <description>Recent content in Tags on 飞雪无情的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>zh-CN</language>
     <lastBuildDate>Wed, 25 Dec 2019 08:38:47 +0000</lastBuildDate>
     
 	<atom:link href="https://SolitaryStarSky.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,10 @@
     
     <item>
       <title>BFS</title>
-      <link>https://SolitaryStarSky.github.io/tags/BFS/</link>
+      <link>https://SolitaryStarSky.github.io/tags/bfs/</link>
       <pubDate>Wed, 25 Dec 2019 08:38:47 +0000</pubDate>
       
-      <guid>https://SolitaryStarSky.github.io/tags/BFS/</guid>
+      <guid>https://SolitaryStarSky.github.io/tags/bfs/</guid>
       <description></description>
     </item>
     

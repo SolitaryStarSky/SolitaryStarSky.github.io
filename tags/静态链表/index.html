@@ -1,60 +1,243 @@
 <!doctype html>
-<html lang="zh-cn">
-  <head>
-    <title>静态链表 // 孤星的天空</title>
-    <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.68.3" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="John Doe" />
-    <meta name="description" content="" />
-    <link rel="stylesheet" href="https://SolitaryStarSky.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+<html lang="zh-CN">
+<head>
 
-    
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="静态链表"/>
-<meta name="twitter:description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:title" content="静态链表" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://SolitaryStarSky.github.io/tags/%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8/" />
-<meta property="og:updated_time" content="2019-11-21T09:00:39+00:00" />
-
-
-  </head>
-  <body>
-    <header class="app-header">
-      <a href="https://SolitaryStarSky.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
-      <h1>孤星的天空</h1>
-      <p>你若决定灿烂，山无遮，海无拦</p>
-      <div class="app-header-social">
+    <title>静态链表 | 飞雪无情的博客</title>
+    <meta property="og:title" content="静态链表 - 飞雪无情的博客">
+    <meta property="og:type" content="article">
         
-      </div>
-    </header>
-    <main class="app-container">
-      
-  <article>
-    <h1>静态链表</h1>
-    <ul class="posts-list">
-      
-        <li class="posts-list-item">
-          <a class="posts-list-item-title" href="https://SolitaryStarSky.github.io/2019/11/21/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F/">链式前向星</a>
-          <span class="posts-list-item-description">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
-  <title>clock</title>
-  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
-</svg> 1 min read -
-            Nov 21, 2019
-          </span>
-        </li>
-      
-    </ul>
+        
+    <meta name="Keywords" content="golang,go语言,go语言笔记,飞雪无情,java,android,博客,项目管理,python,软件架构,公众号,小程序">
+    <meta name="description" content="静态链表">
+        
+    <meta name="author" content="飞雪无情">
+    <meta property="og:url" content="https://SolitaryStarSky.github.io/tags/%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <link rel="alternate" type="application/rss+xml+xml" href="https://SolitaryStarSky.github.io/tags/%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8/index.xml" title="飞雪无情的博客" />
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://SolitaryStarSky.github.io">
+                        飞雪无情的博客
+                    </a>
+                
+                <p class="description">专注于Android、Java、Go语言(golang)、移动互联网、项目管理、软件架构</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="" href="https://SolitaryStarSky.github.io">首页</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <h3 class="archive-title">
+        包含标签
+        <span class="keyword">静态链表</span>
+        的文章
+    </h3>
+    
+
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F/">链式前向星</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年11月21日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a>
+            
+        </div>
+        
+        <div class="post-content">
+            在学习算法spfa的过程之中，其代码的实现过程是用了链式前向星结构实现，因此了解并学习了一下链式前向星
+什么是链式前向星 前向星的本质其实是静态链表，如果说邻接表存的是点的集合，那么链式前向星是存的是边的集合。
+为什么要采用链式前向星 如果说邻接表是不好写但效率好，邻接矩阵是好写但效率低的话，前向星就是一个相对中庸的数据结构。前向星固然好些，但效率并不高。而在优化为链式前向星后，效率也得到了较大的提升。虽然说，世界上对链式前向星的使用并不是很广泛，但在不愿意写复杂的邻接表的情况下，链式前向星也是一个很优秀的数据结构。
+主要代码实现 struct Edge { int next;//下一条边的编号 	int to;//这条边到达的点 	int dis;//这条边的长度 }edge[maxm]; void add_edge(int from,int to,int dis) //加入一条从from到to距离为dis的单向边 { edge[++num_edge].next=head[from]; edge[num_edge].to=to;//将to记录 	edge[num_edge].dis=dis;//将dis记录 	head[from]=num_edge;// } head[i]数组与next 关于head[i]的含义，我们理解为指向 i 结点的第一条边。这是方便于我们在接下来调用的时候能够完好的访问：i结点第一条边通过head访问，剩下的边通过next指针指向。
+总的来说： head[i]来指向 i 结点的第一条边 next指向下一条边
+调用核心代码 for(int i=head[k];i!=0;i=edge[i].next) ……
+            <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F/">阅读全文</a></p>
+        </div>
+    </article>
+    
+
     
 
 
 
-  </article>
 
-    </main>
-  </body>
+
+</div>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='//www.google.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://SolitaryStarSky.github.io">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/poj-1426-find-the-multiple/" title="poj 1426 Find The Multiple">poj 1426 Find The Multiple</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/bfs%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/" title="BFS————广度优先搜索">BFS————广度优先搜索</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/" title="归并排序">归并排序</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%85%B6%E7%94%9F%E6%88%90/" title="哈夫曼树及其生成">哈夫曼树及其生成</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E7%94%9F%E6%88%90/" title="二叉树的层序生成">二叉树的层序生成</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F/" title="链式前向星">链式前向星</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97/" title="顺序结构循环队列">顺序结构循环队列</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E9%98%9F%E5%88%97/" title="链式队列">链式队列</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/" title="二叉树的链接结构">二叉树的链接结构</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/" title="栈实现十进制转换二进制">栈实现十进制转换二进制</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="https://SolitaryStarSky.github.io/categories/%E5%88%B7%E9%A2%98/">刷题 (1)</a></li>
+    
+    <li><a href="https://SolitaryStarSky.github.io/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E9%A1%B9/">数学杂项 (1)</a></li>
+    
+    <li><a href="https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构 (9)</a></li>
+    
+    <li><a href="https://SolitaryStarSky.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (3)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="https://SolitaryStarSky.github.io/tags/bfs/">BFS</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">哈夫曼树</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E6%90%9C%E7%B4%A2/">搜索</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E6%A0%88/">栈</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E6%A0%91/">树</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F/">链式前向星</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E9%93%BE%E8%A1%A8/">链表</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8/">静态链表</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://SolitaryStarSky.github.io/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2020 <a href="https://SolitaryStarSky.github.io">飞雪无情的博客 By 飞雪无情</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+
+
+
+</body>
+
 </html>

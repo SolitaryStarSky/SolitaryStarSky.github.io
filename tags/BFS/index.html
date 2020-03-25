@@ -1,71 +1,267 @@
 <!doctype html>
-<html lang="zh-cn">
-  <head>
-    <title>BFS // 孤星的天空</title>
-    <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.68.3" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="John Doe" />
-    <meta name="description" content="" />
-    <link rel="stylesheet" href="https://SolitaryStarSky.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+<html lang="zh-CN">
+<head>
 
-    
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="BFS"/>
-<meta name="twitter:description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:title" content="BFS" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://SolitaryStarSky.github.io/tags/BFS/" />
-<meta property="og:updated_time" content="2019-12-25T08:38:47+00:00" />
-
-
-  </head>
-  <body>
-    <header class="app-header">
-      <a href="https://SolitaryStarSky.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
-      <h1>孤星的天空</h1>
-      <p>你若决定灿烂，山无遮，海无拦</p>
-      <div class="app-header-social">
+    <title>BFS | 飞雪无情的博客</title>
+    <meta property="og:title" content="BFS - 飞雪无情的博客">
+    <meta property="og:type" content="article">
         
-      </div>
-    </header>
-    <main class="app-container">
-      
-  <article>
-    <h1>BFS</h1>
-    <ul class="posts-list">
-      
-        <li class="posts-list-item">
-          <a class="posts-list-item-title" href="https://SolitaryStarSky.github.io/2019/12/25/poj-1426-Find-The-Multiple/">poj 1426 Find The Multiple</a>
-          <span class="posts-list-item-description">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
-  <title>clock</title>
-  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
-</svg> 1 min read -
-            Dec 25, 2019
-          </span>
-        </li>
-      
-        <li class="posts-list-item">
-          <a class="posts-list-item-title" href="https://SolitaryStarSky.github.io/2019/12/24/BFS%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">BFS————广度优先搜索</a>
-          <span class="posts-list-item-description">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
-  <title>clock</title>
-  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
-</svg> 1 min read -
-            Dec 24, 2019
-          </span>
-        </li>
-      
-    </ul>
+        
+    <meta name="Keywords" content="golang,go语言,go语言笔记,飞雪无情,java,android,博客,项目管理,python,软件架构,公众号,小程序">
+    <meta name="description" content="BFS">
+        
+    <meta name="author" content="飞雪无情">
+    <meta property="og:url" content="https://SolitaryStarSky.github.io/tags/bfs/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <link rel="alternate" type="application/rss+xml+xml" href="https://SolitaryStarSky.github.io/tags/bfs/index.xml" title="飞雪无情的博客" />
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://SolitaryStarSky.github.io">
+                        飞雪无情的博客
+                    </a>
+                
+                <p class="description">专注于Android、Java、Go语言(golang)、移动互联网、项目管理、软件架构</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="" href="https://SolitaryStarSky.github.io">首页</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <h3 class="archive-title">
+        包含标签
+        <span class="keyword">BFS</span>
+        的文章
+    </h3>
+    
+
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://SolitaryStarSky.github.io/post/poj-1426-find-the-multiple/">poj 1426 Find The Multiple</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年12月25日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://SolitaryStarSky.github.io/categories/%E5%88%B7%E9%A2%98'>刷题</a>
+            
+        </div>
+        
+        <div class="post-content">
+            题意 给你一个数n，你要找出一个只由0和1组成的不超过100位的数，使得该数是n的m倍
+思路 这是一道BFS题，入队的时候有两种情况：一种是10t；一种是10t+1；这题还有个坑点是用C++的STL的队列会T,所以需要自己写一个队列
+题目链接 http://poj.org/problem?id=1426
+代码 #include&lt;iostream&gt;#include&lt;queue&gt;using namespace std; long long a[10000000]; long long bfs(int N) { int front = 0; int rear = 0; a[rear++] = 1; while (front != rear) { long long tmp = a[front++]; if (tmp % N == 0) { return tmp; } a[rear++] = tmp * 10; a[rear++] = tmp * 10 + 1; } return -1; } int main() { int N; while (cin &gt;&gt; N) { if (N == 0)break; cout &lt;&lt; bfs(N) &lt;&lt; endl; } return 0; } ……
+            <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/poj-1426-find-the-multiple/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://SolitaryStarSky.github.io/post/bfs%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">BFS————广度优先搜索</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年12月24日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://SolitaryStarSky.github.io/categories/%E7%AE%97%E6%B3%95'>算法</a>
+            
+        </div>
+        
+        <div class="post-content">
+            什么是BFS BFS又称为广度优先搜索。举个例子：一群老鼠走迷宫。假设老鼠是无限多的，这群老鼠进去后，在每个路口派出部分老鼠探索所有没走过的路。走某条路的老鼠，如果碰壁无法前行，就停下；如果到达的路口已经有其他老鼠探索过了，也停下。很显然，所有的道路都会走到，而且不会重复。这个思路就是BFS。BFS看起来像“并行计算”，不过，由于程序是单机顺序运行的，所以可以把BFS看成是并行计算的模拟。
+如何实现BFS 在具体编程时，一般用队列这种数据结构来具体实现BFS，甚至可以说“BFS=队列”。
+代码如下：
+#include&lt;iostream&gt;#include&lt;queue&gt;#define CHECK(x,y)(x&gt;=0&amp;&amp;x&lt;=wx&amp;&amp;y&gt;=0&amp;&amp;y&lt;=hy) using namespace std; int wx,hy,num; char room[23][23]; int dir[4][2]={{-1,0},{0,-1},{1,0},{0,1}}; struct node{ int x,y; } void BFS(int dx,int dy){ num=1; queue&lt;node&gt;q; node start,next; start.x=dx; start.y=dy; q.push(start); while(!q.empty()){ next=q.front(); q.pop(); for(int i=0;i&lt;4;i++){ next.x=start.x+dir[i][0]; next.y=start.y+dir[i][1]; if(CHECK(next.y,next.y)&amp;&amp;room[next.x][next.y]==&#39;.&#39;){ room[next.x][next.y]=&#39;#&#39;; num++; q.push(next); } } } } int main(){ int dx,dy,x,y; while(cin&gt;&gt;wx&gt;&gt;hy){ if(wx==0&amp;&amp;hy==0)break; for(y=0;y&lt;hy;y++){ for(x=0;x&lt;wx;x++){ cin&gt;&gt;room[x][y]; if(room[x][y]==&#39;@&#39;){ dx=x; dy=y; } } } num=0; BFS(dx,dy); cout&lt;&lt;num&lt;&lt;endl; } return 0; } ……
+            <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/bfs%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">阅读全文</a></p>
+        </div>
+    </article>
+    
+
     
 
 
 
-  </article>
 
-    </main>
-  </body>
+
+</div>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='//www.google.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://SolitaryStarSky.github.io">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/poj-1426-find-the-multiple/" title="poj 1426 Find The Multiple">poj 1426 Find The Multiple</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/bfs%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/" title="BFS————广度优先搜索">BFS————广度优先搜索</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/" title="归并排序">归并排序</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%85%B6%E7%94%9F%E6%88%90/" title="哈夫曼树及其生成">哈夫曼树及其生成</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E7%94%9F%E6%88%90/" title="二叉树的层序生成">二叉树的层序生成</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F/" title="链式前向星">链式前向星</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97/" title="顺序结构循环队列">顺序结构循环队列</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E9%98%9F%E5%88%97/" title="链式队列">链式队列</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/" title="二叉树的链接结构">二叉树的链接结构</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/" title="栈实现十进制转换二进制">栈实现十进制转换二进制</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="https://SolitaryStarSky.github.io/categories/%E5%88%B7%E9%A2%98/">刷题 (1)</a></li>
+    
+    <li><a href="https://SolitaryStarSky.github.io/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E9%A1%B9/">数学杂项 (1)</a></li>
+    
+    <li><a href="https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构 (9)</a></li>
+    
+    <li><a href="https://SolitaryStarSky.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (3)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="https://SolitaryStarSky.github.io/tags/bfs/">BFS</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">哈夫曼树</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E6%90%9C%E7%B4%A2/">搜索</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E6%A0%88/">栈</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E6%A0%91/">树</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F/">链式前向星</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E9%93%BE%E8%A1%A8/">链表</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8/">静态链表</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://SolitaryStarSky.github.io/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2020 <a href="https://SolitaryStarSky.github.io">飞雪无情的博客 By 飞雪无情</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+
+
+
+</body>
+
 </html>

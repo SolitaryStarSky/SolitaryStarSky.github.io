@@ -1,82 +1,289 @@
 <!doctype html>
-<html lang="zh-cn">
-  <head>
-    <title>树 // 孤星的天空</title>
-    <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.68.3" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="John Doe" />
-    <meta name="description" content="" />
-    <link rel="stylesheet" href="https://SolitaryStarSky.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+<html lang="zh-CN">
+<head>
 
-    
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="树"/>
-<meta name="twitter:description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:title" content="树" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://SolitaryStarSky.github.io/tags/%E6%A0%91/" />
-<meta property="og:updated_time" content="2019-11-27T15:41:11+00:00" />
-
-
-  </head>
-  <body>
-    <header class="app-header">
-      <a href="https://SolitaryStarSky.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
-      <h1>孤星的天空</h1>
-      <p>你若决定灿烂，山无遮，海无拦</p>
-      <div class="app-header-social">
+    <title>树 | 飞雪无情的博客</title>
+    <meta property="og:title" content="树 - 飞雪无情的博客">
+    <meta property="og:type" content="article">
         
-      </div>
-    </header>
-    <main class="app-container">
-      
-  <article>
-    <h1>树</h1>
-    <ul class="posts-list">
-      
-        <li class="posts-list-item">
-          <a class="posts-list-item-title" href="https://SolitaryStarSky.github.io/2019/11/27/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%85%B6%E7%94%9F%E6%88%90/">哈夫曼树及其生成</a>
-          <span class="posts-list-item-description">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
-  <title>clock</title>
-  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
-</svg> 1 min read -
-            Nov 27, 2019
-          </span>
-        </li>
-      
-        <li class="posts-list-item">
-          <a class="posts-list-item-title" href="https://SolitaryStarSky.github.io/2019/11/23/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E7%94%9F%E6%88%90/">二叉树的层序生成</a>
-          <span class="posts-list-item-description">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
-  <title>clock</title>
-  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
-</svg> 1 min read -
-            Nov 23, 2019
-          </span>
-        </li>
-      
-        <li class="posts-list-item">
-          <a class="posts-list-item-title" href="https://SolitaryStarSky.github.io/2019/11/12/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/">二叉树的链接结构</a>
-          <span class="posts-list-item-description">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
-  <title>clock</title>
-  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
-</svg> 1 min read -
-            Nov 12, 2019
-          </span>
-        </li>
-      
-    </ul>
+        
+    <meta name="Keywords" content="golang,go语言,go语言笔记,飞雪无情,java,android,博客,项目管理,python,软件架构,公众号,小程序">
+    <meta name="description" content="树">
+        
+    <meta name="author" content="飞雪无情">
+    <meta property="og:url" content="https://SolitaryStarSky.github.io/tags/%E6%A0%91/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <link rel="alternate" type="application/rss+xml+xml" href="https://SolitaryStarSky.github.io/tags/%E6%A0%91/index.xml" title="飞雪无情的博客" />
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://SolitaryStarSky.github.io">
+                        飞雪无情的博客
+                    </a>
+                
+                <p class="description">专注于Android、Java、Go语言(golang)、移动互联网、项目管理、软件架构</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="" href="https://SolitaryStarSky.github.io">首页</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <h3 class="archive-title">
+        包含标签
+        <span class="keyword">树</span>
+        的文章
+    </h3>
+    
+
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://SolitaryStarSky.github.io/post/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%85%B6%E7%94%9F%E6%88%90/">哈夫曼树及其生成</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年11月27日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a>
+            
+        </div>
+        
+        <div class="post-content">
+            什么是哈夫曼树 哈夫曼树又称最优二叉树，是一种带权路径长度最短的二叉树。所谓树的带权路径长度，就是树中所有的叶结点的权值乘上其到根结点的路径长度（若根结点为0层，叶结点到根结点的路径长度为叶结点的层数）。树的带权路径长度记为WPL=(W1L1+W2L2+W3L3+&hellip;+ WnLn)，N个权值Wi(i=1,2,&hellip;n)构成一棵有N个叶结点的二叉树，相应的叶结点的路径长度为Li(i=1,2,&hellip;n)。可以证明哈夫曼树的WPL是最小的。 构造哈夫曼树的算法如下： 1）对给定的n个权值{W1,W2,W3,&hellip;,Wi,&hellip;,Wn}构成n棵二叉树的初始集合F={T1,T2,T3,&hellip;,Ti,&hellip;, Tn}，其中每棵二叉树Ti中只有一个权值为Wi的根结点，它的左右子树均为空。 2）在F中选取两棵根结点权值最小的树作为新构造的二叉树的左右子树，新二叉树的根结点的权值为其左右子树的根结点的权值之和。 3）从F中删除这两棵树，并把这棵新的二叉树同样以升序排列加入到集合F中。 4）重复2）和3），直到集合F中只有一棵二叉树为止。
+ 例如，对于4个权值为1、3、5、7的节点构造一棵哈夫曼树，其构造过程如下图所示：  哈夫曼树的算法实现 #include&lt;iostream&gt;#include&lt;iomanip&gt;#include&lt;cfloat&gt;using namespace std; const int n=5; const int m=2*n-1; typedef struct{ float weight; int parent,lchild,rchild; }nodetype; typedef nodetype hftree[m]; hftree T; void huffman(hftree T){ int p1,p2,i,j; float small1,small2; for(i=0;i&lt;n;i++){ T[i].parent=T[i].lchild=T[i].rchild=-1; } for(i=0;i&lt;n;i++){ cin&gt;&gt;T[i].weight; } for(i=n;i&lt;m;i++){ p1=p2=-1; small1=small2=FLT_MAX; for(j=0;j&lt;=i-1;j++){ if(T[j].parent!=-1)continue; if(T[j].weight&lt;small1){ small2=small1; small1=T[j].weight; p2=p1; p1=j; } else if(T[j].weight&lt;small2){ small2=T[j].weight; p2=j; } } T[p1].parent=T[p2].parent=i; T[i].parent=-1; T[i].lchild=p1; T[i].rchild=p2; T[i].weight=small1+small2; } } 输出哈夫曼树 这里用到了头文件，主要是运用setw()控制一下输出的格式……
+            <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%85%B6%E7%94%9F%E6%88%90/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E7%94%9F%E6%88%90/">二叉树的层序生成</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年11月23日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a>
+            
+        </div>
+        
+        <div class="post-content">
+            算法的基本思想：依次输入结点信息，若输入的结点不是虚结点，则建立一个新结点；若新结点是第1个结点，则令其为根节点；否则将新结点作为孩子链接到它的双亲结点上。如此重复下去，直到输入字符“#”为止
+核心代码：
+Bitree level_create(){ char ch; pointer Q[maxsize+1]; int front,rear; pointer root,s; root=NULL; front=rear=0; while(cin&gt;&gt;ch,ch!=&#39;#&#39;){ if(ch!=&#39;@&#39;){ s=new node; s-&gt;data=ch; s-&gt;lchild=s-&gt;rchild=NULL; } else s=NULL; rear++;//不管结点是否为虚，都要入队  Q[rear]=s; if(rear==1){//第一个结点是根，要修改头指针，它不是孩子  root=s; front=1; } else{ if(s&amp;&amp;Q[front]){ if(rear%2==0)Q[front]-&gt;lchild=s; else Q[front]-&gt;rchild=s; } if(rear%2==1)front++;//不论是否为虚，右孩子入队后，双亲出队  } } return root; } ……
+            <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E7%94%9F%E6%88%90/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/">二叉树的链接结构</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年11月12日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a>
+            
+        </div>
+        
+        <div class="post-content">
+            对着书本敲了一个钟的二叉树，被二叉树建立时的输入问题困扰了很久。二叉树的建立一般使用递归算法，将所有节点的数据猛的输入，递归无法停止，二叉树就无法建立。 自己对着书本敲了一次也没发现怎么回事，最后看了一篇博文之后，豁然开朗。我们在输入节点数据的时候，必须输入空闲叶子结点，并用特殊符号标记。
+最后自己终于实现了最终的二叉链表的构造及其三种顺序遍历的实现 PS：输入的时候得适当制造一定数量的空节点才能结束二叉树的输入，这个需要个人自己体会。 代码如下：
+#include &lt;iostream&gt;using namespace std;typedef struct node* pointer;typedef char datatype;typedef struct node {datatype data;pointer left, right;}BinTNode;//定义结构体BinTNodetypedef BinTNode* BinTree;//结构体指针BinTreeBinTree Create_Tree()//二叉树的创建{BinTree p;char c;cin &gt;&gt; c;if (c == &#39;#&#39;)//如果遇到字符串&#34;#&#34;，则设该结点值为空	p = NULL;else{p = new node;p-&gt;data = c;p-&gt;left = Create_Tree();p-&gt;right = Create_Tree();}return p;//返回二叉树结构体指针}void preorder(BinTree T) {//先序遍历	if (T !……
+            <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/">阅读全文</a></p>
+        </div>
+    </article>
+    
+
     
 
 
 
-  </article>
 
-    </main>
-  </body>
+
+</div>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='//www.google.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://SolitaryStarSky.github.io">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/poj-1426-find-the-multiple/" title="poj 1426 Find The Multiple">poj 1426 Find The Multiple</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/bfs%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/" title="BFS————广度优先搜索">BFS————广度优先搜索</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/" title="归并排序">归并排序</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%85%B6%E7%94%9F%E6%88%90/" title="哈夫曼树及其生成">哈夫曼树及其生成</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E7%94%9F%E6%88%90/" title="二叉树的层序生成">二叉树的层序生成</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F/" title="链式前向星">链式前向星</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97/" title="顺序结构循环队列">顺序结构循环队列</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E9%98%9F%E5%88%97/" title="链式队列">链式队列</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/" title="二叉树的链接结构">二叉树的链接结构</a>
+    </li>
+    
+    <li>
+        <a href="https://SolitaryStarSky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/" title="栈实现十进制转换二进制">栈实现十进制转换二进制</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="https://SolitaryStarSky.github.io/categories/%E5%88%B7%E9%A2%98/">刷题 (1)</a></li>
+    
+    <li><a href="https://SolitaryStarSky.github.io/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E9%A1%B9/">数学杂项 (1)</a></li>
+    
+    <li><a href="https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构 (9)</a></li>
+    
+    <li><a href="https://SolitaryStarSky.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (3)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="https://SolitaryStarSky.github.io/tags/bfs/">BFS</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">哈夫曼树</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E6%90%9C%E7%B4%A2/">搜索</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E6%A0%88/">栈</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E6%A0%91/">树</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F/">链式前向星</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E9%93%BE%E8%A1%A8/">链表</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8/">静态链表</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://SolitaryStarSky.github.io/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2020 <a href="https://SolitaryStarSky.github.io">飞雪无情的博客 By 飞雪无情</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+
+
+
+</body>
+
 </html>
