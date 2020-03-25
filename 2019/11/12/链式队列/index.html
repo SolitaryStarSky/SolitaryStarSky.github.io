@@ -1,135 +1,4 @@
-<!doctype html>
-<html lang="zh-cn">
-  <head>
-    <title>链式队列 // 孤星的天空</title>
-    <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.68.3" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="John Doe" />
-    <meta name="description" content="" />
-    <link rel="stylesheet" href="https://SolitaryStarSky.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
-
+<div class="post-comment">
     
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="链式队列"/>
-<meta name="twitter:description" content="最近数据结构老师要求我们在上机课上要不看书敲出来链式队列并实现功能，所以在此练练手
-由于比较简单，所以直接上代码
-#include&lt;iostream&gt;using namespace std;typedef int datatype;typedef struct node* pointer;struct node{datatype data;pointer next;};typedef struct{pointer front,rear;}lkqueue;void init_lkqueue(lkqueue *lq){//创建链队列 pointer p;p=new node;p-&gt;next=NULL;lq-&gt;front=p;lq-&gt;rear=p;}void enter_lkqueue(lkqueue *lq,datatype x){//入队功能实现 pointer s;s=new node;s-&gt;data=x;lq-&gt;rear-&gt;next=s;lq-&gt;rear=s;s-&gt;next=NULL;}int empty_lkqueue(lkqueue *lq){//判断队列是否为空 if(lq-&gt;front==lq-&gt;rear)return 1;else return 0;}int out_lkqueue(lkqueue *lq,datatype *x){//出队功能实现 pointer s;if(lq-&gt;front==lq-&gt;rear){cout&lt;&lt;&#34;队空，不能出队!&#34;&lt;&lt;endl;return 0;}s=lq-&gt;front-&gt;next;*x=s-&gt;data;lq-&gt;front-&gt;next=s-&gt;next;cout&lt;&lt;&#34;出队元素为&#34;&lt;&lt;*x&lt;&lt;endl;delete s;return 1;}int main(){lkqueue *lq;lq=new lkqueue;datatype *x;x=new datatype;init_lkqueue(lq);empty_lkqueue(lq);enter_lkqueue(lq,100);empty_lkqueue(lq);out_lkqueue(lq,x);empty_lkqueue(lq);return 0;}"/>
-
-    <meta property="og:title" content="链式队列" />
-<meta property="og:description" content="最近数据结构老师要求我们在上机课上要不看书敲出来链式队列并实现功能，所以在此练练手
-由于比较简单，所以直接上代码
-#include&lt;iostream&gt;using namespace std;typedef int datatype;typedef struct node* pointer;struct node{datatype data;pointer next;};typedef struct{pointer front,rear;}lkqueue;void init_lkqueue(lkqueue *lq){//创建链队列 pointer p;p=new node;p-&gt;next=NULL;lq-&gt;front=p;lq-&gt;rear=p;}void enter_lkqueue(lkqueue *lq,datatype x){//入队功能实现 pointer s;s=new node;s-&gt;data=x;lq-&gt;rear-&gt;next=s;lq-&gt;rear=s;s-&gt;next=NULL;}int empty_lkqueue(lkqueue *lq){//判断队列是否为空 if(lq-&gt;front==lq-&gt;rear)return 1;else return 0;}int out_lkqueue(lkqueue *lq,datatype *x){//出队功能实现 pointer s;if(lq-&gt;front==lq-&gt;rear){cout&lt;&lt;&#34;队空，不能出队!&#34;&lt;&lt;endl;return 0;}s=lq-&gt;front-&gt;next;*x=s-&gt;data;lq-&gt;front-&gt;next=s-&gt;next;cout&lt;&lt;&#34;出队元素为&#34;&lt;&lt;*x&lt;&lt;endl;delete s;return 1;}int main(){lkqueue *lq;lq=new lkqueue;datatype *x;x=new datatype;init_lkqueue(lq);empty_lkqueue(lq);enter_lkqueue(lq,100);empty_lkqueue(lq);out_lkqueue(lq,x);empty_lkqueue(lq);return 0;}" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://SolitaryStarSky.github.io/2019/11/12/%E9%93%BE%E5%BC%8F%E9%98%9F%E5%88%97/" />
-<meta property="article:published_time" content="2019-11-12T21:10:45+00:00" />
-<meta property="article:modified_time" content="2019-11-12T21:10:45+00:00" />
-
-
-  </head>
-  <body>
-    <header class="app-header">
-      <a href="https://SolitaryStarSky.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
-      <h1>孤星的天空</h1>
-      <p>你若决定灿烂，山无遮，海无拦</p>
-      <div class="app-header-social">
-        
-      </div>
-    </header>
-    <main class="app-container">
       
-  <article class="post">
-    <header class="post-header">
-      <h1 class ="post-title">链式队列</h1>
-      <div class="post-meta">
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
-  <title>calendar</title>
-  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
-</svg>
-          Nov 12, 2019
-        </div>
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
-  <title>clock</title>
-  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
-</svg>
-          1 min read
-        </div></div>
-    </header>
-    <div class="post-content">
-      <p>最近数据结构老师要求我们在上机课上要不看书敲出来链式队列并实现功能，所以在此练练手</p>
-<p>由于比较简单，所以直接上代码</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
-<span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">int</span> datatype;
-<span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">node</span><span style="color:#f92672">*</span> pointer;
-<span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">node</span>{
-    datatype data;
-    pointer next;
-};
-
-<span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span>{
-    pointer front,rear;
-}lkqueue;
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">init_lkqueue</span>(lkqueue <span style="color:#f92672">*</span>lq){<span style="color:#75715e">//创建链队列
-</span><span style="color:#75715e"></span>    pointer p;
-    p<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> node;
-    p<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">=</span>NULL;
-    lq<span style="color:#f92672">-&gt;</span>front<span style="color:#f92672">=</span>p;
-    lq<span style="color:#f92672">-&gt;</span>rear<span style="color:#f92672">=</span>p;
-}
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">enter_lkqueue</span>(lkqueue <span style="color:#f92672">*</span>lq,datatype x){<span style="color:#75715e">//入队功能实现
-</span><span style="color:#75715e"></span>    pointer s;
-    s<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> node;
-    s<span style="color:#f92672">-&gt;</span>data<span style="color:#f92672">=</span>x;
-    lq<span style="color:#f92672">-&gt;</span>rear<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">=</span>s;
-    lq<span style="color:#f92672">-&gt;</span>rear<span style="color:#f92672">=</span>s;
-    s<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">=</span>NULL;
-}
-
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">empty_lkqueue</span>(lkqueue <span style="color:#f92672">*</span>lq){<span style="color:#75715e">//判断队列是否为空
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span>(lq<span style="color:#f92672">-&gt;</span>front<span style="color:#f92672">==</span>lq<span style="color:#f92672">-&gt;</span>rear)<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
-    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-}
-
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">out_lkqueue</span>(lkqueue <span style="color:#f92672">*</span>lq,datatype <span style="color:#f92672">*</span>x){<span style="color:#75715e">//出队功能实现
-</span><span style="color:#75715e"></span>    pointer s;
-    <span style="color:#66d9ef">if</span>(lq<span style="color:#f92672">-&gt;</span>front<span style="color:#f92672">==</span>lq<span style="color:#f92672">-&gt;</span>rear){
-        cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;队空，不能出队!&#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
-        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-    }
-    s<span style="color:#f92672">=</span>lq<span style="color:#f92672">-&gt;</span>front<span style="color:#f92672">-&gt;</span>next;
-    <span style="color:#f92672">*</span>x<span style="color:#f92672">=</span>s<span style="color:#f92672">-&gt;</span>data;
-    lq<span style="color:#f92672">-&gt;</span>front<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">=</span>s<span style="color:#f92672">-&gt;</span>next;
-    cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;出队元素为&#34;</span><span style="color:#f92672">&lt;&lt;*</span>x<span style="color:#f92672">&lt;&lt;</span>endl;
-    <span style="color:#66d9ef">delete</span> s;
-    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
-}
-
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
-    lkqueue <span style="color:#f92672">*</span>lq;
-    lq<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> lkqueue;
-    datatype <span style="color:#f92672">*</span>x;
-    x<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> datatype;
-    init_lkqueue(lq);
-    empty_lkqueue(lq);
-    enter_lkqueue(lq,<span style="color:#ae81ff">100</span>);
-    empty_lkqueue(lq);
-    out_lkqueue(lq,x);
-    empty_lkqueue(lq);
-    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-}
-
-</code></pre></div>
-    </div>
-    <div class="post-footer">
-      
-    </div>
-  </article>
-
-    </main>
-  </body>
-</html>
+</div>
