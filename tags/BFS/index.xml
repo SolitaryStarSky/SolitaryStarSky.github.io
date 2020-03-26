@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>BFS on 孤星的天空的博客</title>
-    <link>http://www.solitarystarsky.github.io/tags/bfs/</link>
+    <link>https://SolitaryStarSky.github.io/tags/bfs/</link>
     <description>Recent content in BFS on 孤星的天空的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 25 Dec 2019 08:38:47 +0000</lastBuildDate>
     
-	<atom:link href="http://www.solitarystarsky.github.io/tags/bfs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://SolitaryStarSky.github.io/tags/bfs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>poj 1426 Find The Multiple</title>
-      <link>http://www.solitarystarsky.github.io/post/poj-1426-find-the-multiple/</link>
+      <link>https://SolitaryStarSky.github.io/post/poj-1426-find-the-multiple/</link>
       <pubDate>Wed, 25 Dec 2019 08:38:47 +0000</pubDate>
       
-      <guid>http://www.solitarystarsky.github.io/post/poj-1426-find-the-multiple/</guid>
+      <guid>https://SolitaryStarSky.github.io/post/poj-1426-find-the-multiple/</guid>
       <description>题意 给你一个数n，你要找出一个只由0和1组成的不超过100位的数，使得该数是n的m倍
 思路 这是一道BFS题，入队的时候有两种情况：一种是10t；一种是10t+1；这题还有个坑点是用C++的STL的队列会T,所以需要自己写一个队列
 题目链接 http://poj.org/problem?id=1426
@@ -25,10 +25,10 @@
     
     <item>
       <title>BFS————广度优先搜索</title>
-      <link>http://www.solitarystarsky.github.io/post/bfs%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</link>
+      <link>https://SolitaryStarSky.github.io/post/bfs%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</link>
       <pubDate>Tue, 24 Dec 2019 07:57:59 +0000</pubDate>
       
-      <guid>http://www.solitarystarsky.github.io/post/bfs%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</guid>
+      <guid>https://SolitaryStarSky.github.io/post/bfs%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</guid>
       <description>什么是BFS BFS又称为广度优先搜索。举个例子：一群老鼠走迷宫。假设老鼠是无限多的，这群老鼠进去后，在每个路口派出部分老鼠探索所有没走过的路。走某条路的老鼠，如果碰壁无法前行，就停下；如果到达的路口已经有其他老鼠探索过了，也停下。很显然，所有的道路都会走到，而且不会重复。这个思路就是BFS。BFS看起来像“并行计算”，不过，由于程序是单机顺序运行的，所以可以把BFS看成是并行计算的模拟。
 如何实现BFS 在具体编程时，一般用队列这种数据结构来具体实现BFS，甚至可以说“BFS=队列”。
 代码如下：

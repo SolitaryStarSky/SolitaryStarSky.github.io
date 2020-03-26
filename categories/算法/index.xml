@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>算法 on 孤星的天空的博客</title>
-    <link>http://www.solitarystarsky.github.io/categories/%E7%AE%97%E6%B3%95/</link>
+    <link>https://SolitaryStarSky.github.io/categories/%E7%AE%97%E6%B3%95/</link>
     <description>Recent content in 算法 on 孤星的天空的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 25 Mar 2020 23:46:13 +0800</lastBuildDate>
     
-	<atom:link href="http://www.solitarystarsky.github.io/categories/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://SolitaryStarSky.github.io/categories/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>KMP算法</title>
-      <link>http://www.solitarystarsky.github.io/post/kmp%E7%AE%97%E6%B3%95/</link>
+      <link>https://SolitaryStarSky.github.io/post/kmp%E7%AE%97%E6%B3%95/</link>
       <pubDate>Wed, 25 Mar 2020 23:46:13 +0800</pubDate>
       
-      <guid>http://www.solitarystarsky.github.io/post/kmp%E7%AE%97%E6%B3%95/</guid>
+      <guid>https://SolitaryStarSky.github.io/post/kmp%E7%AE%97%E6%B3%95/</guid>
       <description>快速认识KMP算法 阮一峰老师带你认识KMP算法
 从头到尾彻底理解KMP
 浅谈我对KMP中next数组的认识与理解 next数组是因为总是要找失配字符的上一位字符不方便而产生的
@@ -29,10 +29,10 @@ next数组核心代码 //优化过后的next 数组求法 void GetNextval(char* 
     
     <item>
       <title>BF算法</title>
-      <link>http://www.solitarystarsky.github.io/post/bf%E7%AE%97%E6%B3%95/</link>
+      <link>https://SolitaryStarSky.github.io/post/bf%E7%AE%97%E6%B3%95/</link>
       <pubDate>Wed, 25 Mar 2020 18:22:09 +0800</pubDate>
       
-      <guid>http://www.solitarystarsky.github.io/post/bf%E7%AE%97%E6%B3%95/</guid>
+      <guid>https://SolitaryStarSky.github.io/post/bf%E7%AE%97%E6%B3%95/</guid>
       <description>BF算法 BF算法又称朴素的模式匹配算法，属于串匹配中的暴力法
 即在S的所有字符中逐个匹配P的每个字符。
 局限性 如果情况最坏的时候，假设在一个长度为n的文本串中查找一个长度为m的模式串，则需要匹配n*m次。复杂度将会由O（m+n）退化到O（mn）
@@ -41,10 +41,10 @@ next数组核心代码 //优化过后的next 数组求法 void GetNextval(char* 
     
     <item>
       <title>BFS————广度优先搜索</title>
-      <link>http://www.solitarystarsky.github.io/post/bfs%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</link>
+      <link>https://SolitaryStarSky.github.io/post/bfs%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</link>
       <pubDate>Tue, 24 Dec 2019 07:57:59 +0000</pubDate>
       
-      <guid>http://www.solitarystarsky.github.io/post/bfs%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</guid>
+      <guid>https://SolitaryStarSky.github.io/post/bfs%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</guid>
       <description>什么是BFS BFS又称为广度优先搜索。举个例子：一群老鼠走迷宫。假设老鼠是无限多的，这群老鼠进去后，在每个路口派出部分老鼠探索所有没走过的路。走某条路的老鼠，如果碰壁无法前行，就停下；如果到达的路口已经有其他老鼠探索过了，也停下。很显然，所有的道路都会走到，而且不会重复。这个思路就是BFS。BFS看起来像“并行计算”，不过，由于程序是单机顺序运行的，所以可以把BFS看成是并行计算的模拟。
 如何实现BFS 在具体编程时，一般用队列这种数据结构来具体实现BFS，甚至可以说“BFS=队列”。
 代码如下：
@@ -53,20 +53,20 @@ next数组核心代码 //优化过后的next 数组求法 void GetNextval(char* 
     
     <item>
       <title>归并排序</title>
-      <link>http://www.solitarystarsky.github.io/post/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</link>
+      <link>https://SolitaryStarSky.github.io/post/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</link>
       <pubDate>Mon, 23 Dec 2019 13:50:18 +0000</pubDate>
       
-      <guid>http://www.solitarystarsky.github.io/post/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</guid>
+      <guid>https://SolitaryStarSky.github.io/post/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</guid>
       <description>什么是归并排序 归并排序（Merge Sort）是利用归并的思想实现的排序方法，该算法采用经典的分治（divide-and-conquer）策略将问题分成一些小的问题然后递归求解，即分而治之。
 图解 代码实现 #include&amp;lt;iostream&amp;gt;using namespace std; const int maxsize=5; typedef int datatype; typedef char othertype; typedef struct{ datatype key; othertype other; }rec; typedef rec list[maxsize+1]; list a; list b; void Inser(){ cout&amp;lt;&amp;lt;&amp;#34;请输入:&amp;#34;&amp;lt;&amp;lt;endl; for(int i=1;i&amp;lt;maxsize+1;i++){ cin&amp;gt;&amp;gt;a[i].other&amp;gt;&amp;gt;a[i].key; } } void Merge(list r,list r1,int low,int mid,int high){ int i,j,k; i=low; j=mid+1; k=low; while(i&amp;lt;=mid&amp;amp;&amp;amp;j&amp;lt;=high){ if(r[i].key&amp;lt;=r[j].key)r1[k++]=r[i++]; else r1[k++]=r[j++]; } while(i&amp;lt;=mid)r1[k++]=r[i++]; while(j&amp;lt;=high)r1[k++]=r[j++]; } void Merge_passage(list r,list r1,int n,int len){ int i=1; while(i+2*len-1&amp;lt;=n){ Merge(r,r1,i,i-1+len,i-1+2*len); } if(i-1+len&amp;lt;n){ Merge(r,r1,i,i-1+len,n); } else{ for(int j=i;j&amp;lt;n;j++){ r1[j]=r[j]; } } } void Merge_sort(list r,list r1,int n){ int len; len=1; while(len&amp;lt;n){ Merge_passage(r,r1,n,len);len=len*2; Merge_passage(r1,r,n,len);len=len*2; } } int main(){ Insert(); Merge_sort(a,b,maxsize); for (int i = 1; i &amp;lt; maxsize + 1; i++) { cout &amp;lt;&amp;lt; b[i].</description>
     </item>
     
     <item>
       <title>GCD与LCM</title>
-      <link>http://www.solitarystarsky.github.io/post/gcd%E4%B8%8Elcm/</link>
+      <link>https://SolitaryStarSky.github.io/post/gcd%E4%B8%8Elcm/</link>
       <pubDate>Sun, 13 Oct 2019 16:53:48 +0000</pubDate>
       
-      <guid>http://www.solitarystarsky.github.io/post/gcd%E4%B8%8Elcm/</guid>
+      <guid>https://SolitaryStarSky.github.io/post/gcd%E4%B8%8Elcm/</guid>
       <description>本篇将讲述一下辗转相除法
 GCD（欧几里得）算法求的是两数的最大公约数
 LCM算法则是在GCD的基础上算出两数的最小公倍数

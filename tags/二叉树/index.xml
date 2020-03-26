@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>二叉树 on 孤星的天空的博客</title>
-    <link>http://www.solitarystarsky.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+    <link>https://SolitaryStarSky.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
     <description>Recent content in 二叉树 on 孤星的天空的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sat, 23 Nov 2019 16:51:49 +0000</lastBuildDate>
     
-	<atom:link href="http://www.solitarystarsky.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://SolitaryStarSky.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>二叉树的层序生成</title>
-      <link>http://www.solitarystarsky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E7%94%9F%E6%88%90/</link>
+      <link>https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E7%94%9F%E6%88%90/</link>
       <pubDate>Sat, 23 Nov 2019 16:51:49 +0000</pubDate>
       
-      <guid>http://www.solitarystarsky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E7%94%9F%E6%88%90/</guid>
+      <guid>https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E7%94%9F%E6%88%90/</guid>
       <description>算法的基本思想：依次输入结点信息，若输入的结点不是虚结点，则建立一个新结点；若新结点是第1个结点，则令其为根节点；否则将新结点作为孩子链接到它的双亲结点上。如此重复下去，直到输入字符“#”为止
 核心代码：
 Bitree level_create(){ char ch; pointer Q[maxsize+1]; int front,rear; pointer root,s; root=NULL; front=rear=0; while(cin&amp;gt;&amp;gt;ch,ch!=&amp;#39;#&amp;#39;){ if(ch!=&amp;#39;@&amp;#39;){ s=new node; s-&amp;gt;data=ch; s-&amp;gt;lchild=s-&amp;gt;rchild=NULL; } else s=NULL; rear++;//不管结点是否为虚，都要入队  Q[rear]=s; if(rear==1){//第一个结点是根，要修改头指针，它不是孩子  root=s; front=1; } else{ if(s&amp;amp;&amp;amp;Q[front]){ if(rear%2==0)Q[front]-&amp;gt;lchild=s; else Q[front]-&amp;gt;rchild=s; } if(rear%2==1)front++;//不论是否为虚，右孩子入队后，双亲出队  } } return root; } </description>
@@ -24,10 +24,10 @@ Bitree level_create(){ char ch; pointer Q[maxsize+1]; int front,rear; pointer ro
     
     <item>
       <title>二叉树的链接结构</title>
-      <link>http://www.solitarystarsky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/</link>
+      <link>https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/</link>
       <pubDate>Tue, 12 Nov 2019 20:51:45 +0000</pubDate>
       
-      <guid>http://www.solitarystarsky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/</guid>
+      <guid>https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/</guid>
       <description>对着书本敲了一个钟的二叉树，被二叉树建立时的输入问题困扰了很久。二叉树的建立一般使用递归算法，将所有节点的数据猛的输入，递归无法停止，二叉树就无法建立。 自己对着书本敲了一次也没发现怎么回事，最后看了一篇博文之后，豁然开朗。我们在输入节点数据的时候，必须输入空闲叶子结点，并用特殊符号标记。
 最后自己终于实现了最终的二叉链表的构造及其三种顺序遍历的实现 PS：输入的时候得适当制造一定数量的空节点才能结束二叉树的输入，这个需要个人自己体会。 代码如下：
 #include &amp;lt;iostream&amp;gt;using namespace std;typedef struct node* pointer;typedef char datatype;typedef struct node {datatype data;pointer left, right;}BinTNode;//定义结构体BinTNodetypedef BinTNode* BinTree;//结构体指针BinTreeBinTree Create_Tree()//二叉树的创建{BinTree p;char c;cin &amp;gt;&amp;gt; c;if (c == &amp;#39;#&amp;#39;)//如果遇到字符串&amp;#34;#&amp;#34;，则设该结点值为空	p = NULL;else{p = new node;p-&amp;gt;data = c;p-&amp;gt;left = Create_Tree();p-&amp;gt;right = Create_Tree();}return p;//返回二叉树结构体指针}void preorder(BinTree T) {//先序遍历	if (T !</description>
