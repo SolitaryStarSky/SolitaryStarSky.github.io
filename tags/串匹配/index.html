@@ -26,12 +26,12 @@
     <meta name="description" content="串匹配">
         
     <meta name="author" content="孤星的天空">
-    <meta property="og:url" content="https://SolitaryStarSky.github.io/tags/%E4%B8%B2%E5%8C%B9%E9%85%8D/">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <meta property="og:url" content="http://www.solitarystarsky.github.io/tags/%E4%B8%B2%E5%8C%B9%E9%85%8D/">
+    <link rel="shortcut icon" href="/img/icon-x.png" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml+xml" href="https://SolitaryStarSky.github.io/tags/%E4%B8%B2%E5%8C%B9%E9%85%8D/index.xml" title="孤星的天空的博客" />
+    <link rel="alternate" type="application/rss+xml+xml" href="http://www.solitarystarsky.github.io/tags/%E4%B8%B2%E5%8C%B9%E9%85%8D/index.xml" title="孤星的天空的博客" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -48,7 +48,7 @@
         <div class="col-group">
             <div class="site-name ">
                 
-                    <a id="logo" href="https://SolitaryStarSky.github.io">
+                    <a id="logo" href="http://www.solitarystarsky.github.io">
                         孤星的天空的博客
                     </a>
                 
@@ -56,9 +56,9 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="https://SolitaryStarSky.github.io">首页</a>
+                    <a class="" href="http://www.solitarystarsky.github.io">首页</a>
                     
-                    <a  href="https://SolitaryStarSky.github.io/about/" title="关于">关于</a>
+                    <a  href="http://www.solitarystarsky.github.io/about/" title="关于">关于</a>
                     
                 </nav>
             </div>
@@ -85,7 +85,7 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://SolitaryStarSky.github.io/post/kmp%E7%AE%97%E6%B3%95/">KMP算法</a>
+                <a href="http://www.solitarystarsky.github.io/post/kmp%E7%AE%97%E6%B3%95/">KMP算法</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
@@ -95,7 +95,7 @@
         <div class="post-meta meta-category">
             |
             
-            <a href='https://SolitaryStarSky.github.io/categories/%E7%AE%97%E6%B3%95'>算法</a>
+            <a href='http://www.solitarystarsky.github.io/categories/%E7%AE%97%E6%B3%95'>算法</a>
             
         </div>
         
@@ -108,14 +108,14 @@ next数组的出现使得只用找失配字符对应的next值即为失配字符
 next数组与最大长度表都是对模式串特征的一种映射，使得不需要像BF算法那样匹配多次，相同部分可以跳过
 next数组的第一位为何是-1 由于第一位匹配就失配时，默认向右移动1位，即模式串向右移动的位数=1，此时失配字符的位置=0，代入（模式串向右移动的位数 = 失配字符的位置 - 失配字符对应的next 值）改式之中，即可解得next值为-1
 next数组核心代码 //优化过后的next 数组求法 void GetNextval(char* p, int next[]) { int pLen = strlen(p); next[0] = -1; int k = -1; int j = 0; while (j &lt; pLen - 1) { //p[k]表示前缀，p[j]表示后缀 	if (k == -1 || p[j] == p[k]) { ++j; ++k; //较之前next数组求法，改动在下面4行 	if (p[j] !……
-            <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/kmp%E7%AE%97%E6%B3%95/">阅读全文</a></p>
+            <p class="readmore"><a href="http://www.solitarystarsky.github.io/post/kmp%E7%AE%97%E6%B3%95/">阅读全文</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://SolitaryStarSky.github.io/post/bf%E7%AE%97%E6%B3%95/">BF算法</a>
+                <a href="http://www.solitarystarsky.github.io/post/bf%E7%AE%97%E6%B3%95/">BF算法</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
@@ -125,7 +125,7 @@ next数组核心代码 //优化过后的next 数组求法 void GetNextval(char* 
         <div class="post-meta meta-category">
             |
             
-            <a href='https://SolitaryStarSky.github.io/categories/%E7%AE%97%E6%B3%95'>算法</a>
+            <a href='http://www.solitarystarsky.github.io/categories/%E7%AE%97%E6%B3%95'>算法</a>
             
         </div>
         
@@ -134,7 +134,7 @@ next数组核心代码 //优化过后的next 数组求法 void GetNextval(char* 
 即在S的所有字符中逐个匹配P的每个字符。
 局限性 如果情况最坏的时候，假设在一个长度为n的文本串中查找一个长度为m的模式串，则需要匹配n*m次。复杂度将会由O（m+n）退化到O（mn）
 核心代码 void BF(string s, string p) { int i = 0, j = 0, count = 0,sum=0,ans=0;//i记录文本串位置，j记录模式串位置，count统计该趟匹配次数,sum统计总判断次数，ans统计匹配轮数  while (i &lt; s.size()) { if (s.at(i) == p.at(j)) {//匹配成功，下一位  i++; j++; count++; sum++; } else {//匹配失败 j回溯，i回滚起始的下一位  i=i-count+1; j = 0; count = 0; sum++; ans++; } if (count == p.size()) { ans++; cout &lt;&lt; &#34;模式匹配成功，共走了&#34; &lt;&lt; ans &lt;&lt; &#34;轮&#34; &lt;&lt; endl; cout &lt;&lt; &#34;判断了&#34; &lt;&lt; sum &lt;&lt; &#34;次&#34; &lt;&lt; endl; return; } } cout &lt;&lt; &#34;匹配失败&#34; &lt;&lt; endl; cout &lt;&lt; &#34;判断了&#34; &lt;&lt; sum &lt;&lt; &#34;次&#34; &lt;&lt; endl; } ……
-            <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/bf%E7%AE%97%E6%B3%95/">阅读全文</a></p>
+            <p class="readmore"><a href="http://www.solitarystarsky.github.io/post/bf%E7%AE%97%E6%B3%95/">阅读全文</a></p>
         </div>
     </article>
     
@@ -154,7 +154,7 @@ next数组核心代码 //优化过后的next 数组求法 void GetNextval(char* 
         <form id="search" action='//www.google.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
       
       <input type="text" name="q" maxlength="20" placeholder="Search">
-      <input type="hidden" name="sitesearch" value="https://SolitaryStarSky.github.io">
+      <input type="hidden" name="sitesearch" value="http://www.solitarystarsky.github.io">
       <button type="submit" class="submit icon-search"></button>
 </form>
     </section>
@@ -164,43 +164,43 @@ next数组核心代码 //优化过后的next 数组求法 void GetNextval(char* 
 <ul class="widget-list">
     
     <li>
-        <a href="https://SolitaryStarSky.github.io/post/tomcat%E4%B8%8B%E5%86%99servlet%E4%B8%AD%E6%96%87%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E7%9A%84%E5%9D%91/" title="Tomcat下写Servlet中文编译错误的坑">Tomcat下写Servlet中文编译错误的坑</a>
+        <a href="http://www.solitarystarsky.github.io/post/tomcat%E4%B8%8B%E5%86%99servlet%E4%B8%AD%E6%96%87%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E7%9A%84%E5%9D%91/" title="Tomcat下写Servlet中文编译错误的坑">Tomcat下写Servlet中文编译错误的坑</a>
     </li>
     
     <li>
-        <a href="https://SolitaryStarSky.github.io/post/kmp%E7%AE%97%E6%B3%95/" title="KMP算法">KMP算法</a>
+        <a href="http://www.solitarystarsky.github.io/post/kmp%E7%AE%97%E6%B3%95/" title="KMP算法">KMP算法</a>
     </li>
     
     <li>
-        <a href="https://SolitaryStarSky.github.io/post/bf%E7%AE%97%E6%B3%95/" title="BF算法">BF算法</a>
+        <a href="http://www.solitarystarsky.github.io/post/bf%E7%AE%97%E6%B3%95/" title="BF算法">BF算法</a>
     </li>
     
     <li>
-        <a href="https://SolitaryStarSky.github.io/post/7-11%E9%97%AE%E9%A2%98/" title="7 11问题">7 11问题</a>
+        <a href="http://www.solitarystarsky.github.io/post/7-11%E9%97%AE%E9%A2%98/" title="7 11问题">7 11问题</a>
     </li>
     
     <li>
-        <a href="https://SolitaryStarSky.github.io/post/poj-1426-find-the-multiple/" title="poj 1426 Find The Multiple">poj 1426 Find The Multiple</a>
+        <a href="http://www.solitarystarsky.github.io/post/poj-1426-find-the-multiple/" title="poj 1426 Find The Multiple">poj 1426 Find The Multiple</a>
     </li>
     
     <li>
-        <a href="https://SolitaryStarSky.github.io/post/bfs%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/" title="BFS————广度优先搜索">BFS————广度优先搜索</a>
+        <a href="http://www.solitarystarsky.github.io/post/bfs%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/" title="BFS————广度优先搜索">BFS————广度优先搜索</a>
     </li>
     
     <li>
-        <a href="https://SolitaryStarSky.github.io/post/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/" title="归并排序">归并排序</a>
+        <a href="http://www.solitarystarsky.github.io/post/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/" title="归并排序">归并排序</a>
     </li>
     
     <li>
-        <a href="https://SolitaryStarSky.github.io/post/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%85%B6%E7%94%9F%E6%88%90/" title="哈夫曼树及其生成">哈夫曼树及其生成</a>
+        <a href="http://www.solitarystarsky.github.io/post/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%85%B6%E7%94%9F%E6%88%90/" title="哈夫曼树及其生成">哈夫曼树及其生成</a>
     </li>
     
     <li>
-        <a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E7%94%9F%E6%88%90/" title="二叉树的层序生成">二叉树的层序生成</a>
+        <a href="http://www.solitarystarsky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E7%94%9F%E6%88%90/" title="二叉树的层序生成">二叉树的层序生成</a>
     </li>
     
     <li>
-        <a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F/" title="链式前向星">链式前向星</a>
+        <a href="http://www.solitarystarsky.github.io/post/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F/" title="链式前向星">链式前向星</a>
     </li>
     
 </ul>
@@ -212,17 +212,17 @@ next数组核心代码 //优化过后的next 数组求法 void GetNextval(char* 
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
     
-    <li><a href="https://SolitaryStarSky.github.io/categories/java-web/">java web (1)</a></li>
+    <li><a href="http://www.solitarystarsky.github.io/categories/java-web/">java web (1)</a></li>
     
-    <li><a href="https://SolitaryStarSky.github.io/categories/%E5%88%B7%E9%A2%98/">刷题 (1)</a></li>
+    <li><a href="http://www.solitarystarsky.github.io/categories/%E5%88%B7%E9%A2%98/">刷题 (1)</a></li>
     
-    <li><a href="https://SolitaryStarSky.github.io/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E9%A1%B9/">数学杂项 (1)</a></li>
+    <li><a href="http://www.solitarystarsky.github.io/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E9%A1%B9/">数学杂项 (1)</a></li>
     
-    <li><a href="https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构 (9)</a></li>
+    <li><a href="http://www.solitarystarsky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构 (9)</a></li>
     
-    <li><a href="https://SolitaryStarSky.github.io/categories/%E6%9D%82%E8%B0%88/">杂谈 (1)</a></li>
+    <li><a href="http://www.solitarystarsky.github.io/categories/%E6%9D%82%E8%B0%88/">杂谈 (1)</a></li>
     
-    <li><a href="https://SolitaryStarSky.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (5)</a></li>
+    <li><a href="http://www.solitarystarsky.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (5)</a></li>
     
 </ul>
     </section>
@@ -231,29 +231,29 @@ next数组核心代码 //优化过后的next 数组求法 void GetNextval(char* 
         <h3 class="widget-title">标签</h3>
 <div class="tagcloud">
     
-    <a href="https://SolitaryStarSky.github.io/tags/bfs/">BFS</a>
+    <a href="http://www.solitarystarsky.github.io/tags/bfs/">BFS</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/java-web/">java web</a>
+    <a href="http://www.solitarystarsky.github.io/tags/java-web/">java web</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/%E4%B8%B2%E5%8C%B9%E9%85%8D/">串匹配</a>
+    <a href="http://www.solitarystarsky.github.io/tags/%E4%B8%B2%E5%8C%B9%E9%85%8D/">串匹配</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
+    <a href="http://www.solitarystarsky.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">哈夫曼树</a>
+    <a href="http://www.solitarystarsky.github.io/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">哈夫曼树</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/%E6%90%9C%E7%B4%A2/">搜索</a>
+    <a href="http://www.solitarystarsky.github.io/tags/%E6%90%9C%E7%B4%A2/">搜索</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/%E6%A0%88/">栈</a>
+    <a href="http://www.solitarystarsky.github.io/tags/%E6%A0%88/">栈</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/%E6%A0%91/">树</a>
+    <a href="http://www.solitarystarsky.github.io/tags/%E6%A0%91/">树</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/%E7%AE%97%E6%B3%95%E8%AF%BE%E4%B9%A0%E9%A2%98/">算法课习题</a>
+    <a href="http://www.solitarystarsky.github.io/tags/%E7%AE%97%E6%B3%95%E8%AF%BE%E4%B9%A0%E9%A2%98/">算法课习题</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F/">链式前向星</a>
+    <a href="http://www.solitarystarsky.github.io/tags/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F/">链式前向星</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/%E9%93%BE%E8%A1%A8/">链表</a>
+    <a href="http://www.solitarystarsky.github.io/tags/%E9%93%BE%E8%A1%A8/">链表</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8/">静态链表</a>
+    <a href="http://www.solitarystarsky.github.io/tags/%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8/">静态链表</a>
     
 </div>
     </section>
@@ -278,7 +278,7 @@ next数组核心代码 //优化过后的next 数组求法 void GetNextval(char* 
     <section class="widget">
         <h3 class="widget-title">其它</h3>
         <ul class="widget-list">
-            <li><a href="https://SolitaryStarSky.github.io/index.xml">文章 RSS</a></li>
+            <li><a href="http://www.solitarystarsky.github.io/index.xml">文章 RSS</a></li>
         </ul>
     </section>
 </div>
@@ -287,7 +287,7 @@ next数组核心代码 //优化过后的next 数组求法 void GetNextval(char* 
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://SolitaryStarSky.github.io">孤星的天空的博客 By 孤星的天空</a>.
+        &copy; 2020 <a href="http://www.solitarystarsky.github.io">孤星的天空的博客 By 孤星的天空</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
         

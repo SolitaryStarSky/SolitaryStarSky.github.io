@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>链表 on 孤星的天空的博客</title>
-    <link>https://SolitaryStarSky.github.io/tags/%E9%93%BE%E8%A1%A8/</link>
+    <link>http://www.solitarystarsky.github.io/tags/%E9%93%BE%E8%A1%A8/</link>
     <description>Recent content in 链表 on 孤星的天空的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 17 Oct 2019 21:47:36 +0000</lastBuildDate>
     
-	<atom:link href="https://SolitaryStarSky.github.io/tags/%E9%93%BE%E8%A1%A8/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.solitarystarsky.github.io/tags/%E9%93%BE%E8%A1%A8/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>栈实现十进制转换二进制</title>
-      <link>https://SolitaryStarSky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/</link>
+      <link>http://www.solitarystarsky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/</link>
       <pubDate>Thu, 17 Oct 2019 21:47:36 +0000</pubDate>
       
-      <guid>https://SolitaryStarSky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/</guid>
+      <guid>http://www.solitarystarsky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/</guid>
       <description>思路分析： 只需要用一个变量来存储余数，并入栈即可。另外需要注意一下maxsize-1才是栈满；p.data[p.top]代表的是datatype x的值。 下面是代码实现：
 #include &amp;lt;iostream&amp;gt;using namespace std;const int maxsize = 16;typedef int datatype;typedef struct {datatype data[maxsize];int top;}sqstack;void init_sqstack(sqstack* sq) {sq-&amp;gt;top = -1;}int empty_sqstack(sqstack* sq) {if (sq-&amp;gt;top == -1)return 1;else return 0;}int push_sqstack(sqstack* sq, datatype x) {if (sq-&amp;gt;top == maxsize - 1) {cout &amp;lt;&amp;lt; &amp;#34;栈满，不能进栈！\n&amp;#34;;return 0;}sq-&amp;gt;data[++sq-&amp;gt;top] = x;return 1;}int pop_sqstack(sqstack* sq, datatype* x) {if (sq-&amp;gt;top == -1) {cout &amp;lt;&amp;lt; &amp;#34;栈空，不能退栈!</description>
     </item>

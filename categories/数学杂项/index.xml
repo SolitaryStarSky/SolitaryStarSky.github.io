@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>数学杂项 on 孤星的天空的博客</title>
-    <link>https://SolitaryStarSky.github.io/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E9%A1%B9/</link>
+    <link>http://www.solitarystarsky.github.io/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E9%A1%B9/</link>
     <description>Recent content in 数学杂项 on 孤星的天空的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Tue, 15 Oct 2019 08:07:45 +0000</lastBuildDate>
     
-	<atom:link href="https://SolitaryStarSky.github.io/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E9%A1%B9/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.solitarystarsky.github.io/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E9%A1%B9/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>皮克定理及其应用</title>
-      <link>https://SolitaryStarSky.github.io/post/%E7%9A%AE%E5%85%8B%E5%AE%9A%E7%90%86%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</link>
+      <link>http://www.solitarystarsky.github.io/post/%E7%9A%AE%E5%85%8B%E5%AE%9A%E7%90%86%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</link>
       <pubDate>Tue, 15 Oct 2019 08:07:45 +0000</pubDate>
       
-      <guid>https://SolitaryStarSky.github.io/post/%E7%9A%AE%E5%85%8B%E5%AE%9A%E7%90%86%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</guid>
+      <guid>http://www.solitarystarsky.github.io/post/%E7%9A%AE%E5%85%8B%E5%AE%9A%E7%90%86%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</guid>
       <description>H - 三角形 4.1 Description
 A lattice point is an ordered pair (x,y) where x and y are both integers. Given the coordinates of the vertices of a triangle(which happen to be lattice points), you are to count the number of lattice points which lie completely inside of the triangle(points on the edges or vertices of the triangle do not count).
 4.2 Input The input test file will contain multiple test cases.</description>

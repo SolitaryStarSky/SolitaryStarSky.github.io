@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>串匹配 on 孤星的天空的博客</title>
-    <link>https://SolitaryStarSky.github.io/tags/%E4%B8%B2%E5%8C%B9%E9%85%8D/</link>
+    <link>http://www.solitarystarsky.github.io/tags/%E4%B8%B2%E5%8C%B9%E9%85%8D/</link>
     <description>Recent content in 串匹配 on 孤星的天空的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 25 Mar 2020 23:46:13 +0800</lastBuildDate>
     
-	<atom:link href="https://SolitaryStarSky.github.io/tags/%E4%B8%B2%E5%8C%B9%E9%85%8D/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.solitarystarsky.github.io/tags/%E4%B8%B2%E5%8C%B9%E9%85%8D/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>KMP算法</title>
-      <link>https://SolitaryStarSky.github.io/post/kmp%E7%AE%97%E6%B3%95/</link>
+      <link>http://www.solitarystarsky.github.io/post/kmp%E7%AE%97%E6%B3%95/</link>
       <pubDate>Wed, 25 Mar 2020 23:46:13 +0800</pubDate>
       
-      <guid>https://SolitaryStarSky.github.io/post/kmp%E7%AE%97%E6%B3%95/</guid>
+      <guid>http://www.solitarystarsky.github.io/post/kmp%E7%AE%97%E6%B3%95/</guid>
       <description>快速认识KMP算法 阮一峰老师带你认识KMP算法
 从头到尾彻底理解KMP
 浅谈我对KMP中next数组的认识与理解 next数组是因为总是要找失配字符的上一位字符不方便而产生的
@@ -29,10 +29,10 @@ next数组核心代码 //优化过后的next 数组求法 void GetNextval(char* 
     
     <item>
       <title>BF算法</title>
-      <link>https://SolitaryStarSky.github.io/post/bf%E7%AE%97%E6%B3%95/</link>
+      <link>http://www.solitarystarsky.github.io/post/bf%E7%AE%97%E6%B3%95/</link>
       <pubDate>Wed, 25 Mar 2020 18:22:09 +0800</pubDate>
       
-      <guid>https://SolitaryStarSky.github.io/post/bf%E7%AE%97%E6%B3%95/</guid>
+      <guid>http://www.solitarystarsky.github.io/post/bf%E7%AE%97%E6%B3%95/</guid>
       <description>BF算法 BF算法又称朴素的模式匹配算法，属于串匹配中的暴力法
 即在S的所有字符中逐个匹配P的每个字符。
 局限性 如果情况最坏的时候，假设在一个长度为n的文本串中查找一个长度为m的模式串，则需要匹配n*m次。复杂度将会由O（m+n）退化到O（mn）

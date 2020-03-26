@@ -23,12 +23,12 @@
     <meta property="og:type" content="website">
     <meta name="Keywords" content="孤星的天空，博客，游戏开发，C&#43;&#43;语言学习，算法">
     <meta name="description" content="你若决定灿烂 山无遮 海无拦">
-    <meta property="og:url" content="https://SolitaryStarSky.github.io/">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <meta property="og:url" content="http://www.solitarystarsky.github.io/">
+    <link rel="shortcut icon" href="/img/icon-x.png" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml+xml" href="https://SolitaryStarSky.github.io/index.xml" title="孤星的天空的博客" />
+    <link rel="alternate" type="application/rss+xml+xml" href="http://www.solitarystarsky.github.io/index.xml" title="孤星的天空的博客" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -46,7 +46,7 @@
             <div class="site-name ">
                 
                     <h1>
-                        <a id="logo" href="https://SolitaryStarSky.github.io">
+                        <a id="logo" href="http://www.solitarystarsky.github.io">
                             孤星的天空的博客
                         </a>
                     </h1>
@@ -55,9 +55,9 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="current" href="https://SolitaryStarSky.github.io">首页</a>
+                    <a class="current" href="http://www.solitarystarsky.github.io">首页</a>
                     
-                    <a  href="https://SolitaryStarSky.github.io/about/" title="关于">关于</a>
+                    <a  href="http://www.solitarystarsky.github.io/about/" title="关于">关于</a>
                     
                 </nav>
             </div>
@@ -76,7 +76,7 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://SolitaryStarSky.github.io/post/%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97/" title="顺序结构循环队列">顺序结构循环队列</a>
+                <a href="http://www.solitarystarsky.github.io/post/%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97/" title="顺序结构循环队列">顺序结构循环队列</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
@@ -86,20 +86,20 @@
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a></span>
+            <span class="meta-category"><a href='http://www.solitarystarsky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a></span>
             
         </div>
         
         <div class="post-content">
             #include&lt;iostream&gt;using namespace std; typedef int datatype; const int maxsize = 100; typedef struct node { datatype data[maxsize]; int front, rear; }sqqueue; void init_sqqueue(sqqueue* lq) { lq-&gt;front = lq-&gt;rear = 0; cout &lt;&lt; &#34;创建队列成功&#34; &lt;&lt; endl; } int en_sqqueue(sqqueue* lq, datatype x) { if ((lq-&gt;rear + 1) % maxsize == lq-&gt;front) { cout &lt;&lt; &#34;队满，无法入队&#34; &lt;&lt; endl; return 0; } lq-&gt;rear = (lq-&gt;rear + 1) % maxsize; lq-&gt;data[lq-&gt;rear] = x; cout &lt;&lt; &#34;入队元素为&#34; &lt;&lt; x &lt;&lt; endl; return 1; } int de_sqqueue(sqqueue* lq, datatype* x) { if (lq-&gt;front == lq-&gt;rear) { cout &lt;&lt; &#34;队列为空&#34; &lt;&lt; endl; return 0; } lq-&gt;front = (lq-&gt;front + 1) % maxsize; *x = lq-&gt;data[lq-&gt;front]; cout &lt;&lt; &#34;出队元素为&#34; &lt;&lt; *x &lt;&lt; endl; return 1; } int empty_sqqueue(sqqueue* lq) { if (lq-&gt;front == lq-&gt;rear) { cout &lt;&lt; &#34;队空&#34; &lt;&lt; endl; return 1; } else { cout &lt;&lt; &#34;队不空&#34; &lt;&lt; endl; return 0; } } int main() { sqqueue* lq; datatype* x; x = new datatype; lq = new sqqueue; init_sqqueue(lq); empty_sqqueue(lq); en_sqqueue(lq, 100); en_sqqueue(lq, 200); empty_sqqueue(lq); de_sqqueue(lq, x); de_sqqueue(lq, x); empty_sqqueue(lq); return 0; } ……
         </div>
-        <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97/">阅读全文</a></p>
+        <p class="readmore"><a href="http://www.solitarystarsky.github.io/post/%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97/">阅读全文</a></p>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E9%98%9F%E5%88%97/" title="链式队列">链式队列</a>
+                <a href="http://www.solitarystarsky.github.io/post/%E9%93%BE%E5%BC%8F%E9%98%9F%E5%88%97/" title="链式队列">链式队列</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
@@ -109,7 +109,7 @@
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a></span>
+            <span class="meta-category"><a href='http://www.solitarystarsky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a></span>
             
         </div>
         
@@ -118,13 +118,13 @@
 由于比较简单，所以直接上代码
 #include&lt;iostream&gt;using namespace std;typedef int datatype;typedef struct node* pointer;struct node{datatype data;pointer next;};typedef struct{pointer front,rear;}lkqueue;void init_lkqueue(lkqueue *lq){//创建链队列 pointer p;p=new node;p-&gt;next=NULL;lq-&gt;front=p;lq-&gt;rear=p;}void enter_lkqueue(lkqueue *lq,datatype x){//入队功能实现 pointer s;s=new node;s-&gt;data=x;lq-&gt;rear-&gt;next=s;lq-&gt;rear=s;s-&gt;next=NULL;}int empty_lkqueue(lkqueue *lq){//判断队列是否为空 if(lq-&gt;front==lq-&gt;rear)return 1;else return 0;}int out_lkqueue(lkqueue *lq,datatype *x){//出队功能实现 pointer s;if(lq-&gt;front==lq-&gt;rear){cout&lt;&lt;&#34;队空，不能出队!&#34;&lt;&lt;endl;return 0;}s=lq-&gt;front-&gt;next;*x=s-&gt;data;lq-&gt;front-&gt;next=s-&gt;next;cout&lt;&lt;&#34;出队元素为&#34;&lt;&lt;*x&lt;&lt;endl;delete s;return 1;}int main(){lkqueue *lq;lq=new lkqueue;datatype *x;x=new datatype;init_lkqueue(lq);empty_lkqueue(lq);enter_lkqueue(lq,100);empty_lkqueue(lq);out_lkqueue(lq,x);empty_lkqueue(lq);return 0;}……
         </div>
-        <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E9%98%9F%E5%88%97/">阅读全文</a></p>
+        <p class="readmore"><a href="http://www.solitarystarsky.github.io/post/%E9%93%BE%E5%BC%8F%E9%98%9F%E5%88%97/">阅读全文</a></p>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/" title="二叉树的链接结构">二叉树的链接结构</a>
+                <a href="http://www.solitarystarsky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/" title="二叉树的链接结构">二叉树的链接结构</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
@@ -134,7 +134,7 @@
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a></span>
+            <span class="meta-category"><a href='http://www.solitarystarsky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a></span>
             
         </div>
         
@@ -143,13 +143,13 @@
 最后自己终于实现了最终的二叉链表的构造及其三种顺序遍历的实现 PS：输入的时候得适当制造一定数量的空节点才能结束二叉树的输入，这个需要个人自己体会。 代码如下：
 #include &lt;iostream&gt;using namespace std;typedef struct node* pointer;typedef char datatype;typedef struct node {datatype data;pointer left, right;}BinTNode;//定义结构体BinTNodetypedef BinTNode* BinTree;//结构体指针BinTreeBinTree Create_Tree()//二叉树的创建{BinTree p;char c;cin &gt;&gt; c;if (c == &#39;#&#39;)//如果遇到字符串&#34;#&#34;，则设该结点值为空	p = NULL;else{p = new node;p-&gt;data = c;p-&gt;left = Create_Tree();p-&gt;right = Create_Tree();}return p;//返回二叉树结构体指针}void preorder(BinTree T) {//先序遍历	if (T !……
         </div>
-        <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/">阅读全文</a></p>
+        <p class="readmore"><a href="http://www.solitarystarsky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%93%BE%E6%8E%A5%E7%BB%93%E6%9E%84/">阅读全文</a></p>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://SolitaryStarSky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/" title="栈实现十进制转换二进制">栈实现十进制转换二进制</a>
+                <a href="http://www.solitarystarsky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/" title="栈实现十进制转换二进制">栈实现十进制转换二进制</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
@@ -159,7 +159,7 @@
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a></span>
+            <span class="meta-category"><a href='http://www.solitarystarsky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a></span>
             
         </div>
         
@@ -167,13 +167,13 @@
             思路分析： 只需要用一个变量来存储余数，并入栈即可。另外需要注意一下maxsize-1才是栈满；p.data[p.top]代表的是datatype x的值。 下面是代码实现：
 #include &lt;iostream&gt;using namespace std;const int maxsize = 16;typedef int datatype;typedef struct {datatype data[maxsize];int top;}sqstack;void init_sqstack(sqstack* sq) {sq-&gt;top = -1;}int empty_sqstack(sqstack* sq) {if (sq-&gt;top == -1)return 1;else return 0;}int push_sqstack(sqstack* sq, datatype x) {if (sq-&gt;top == maxsize - 1) {cout &lt;&lt; &#34;栈满，不能进栈！\n&#34;;return 0;}sq-&gt;data[++sq-&gt;top] = x;return 1;}int pop_sqstack(sqstack* sq, datatype* x) {if (sq-&gt;top == -1) {cout &lt;&lt; &#34;栈空，不能退栈!……
         </div>
-        <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/">阅读全文</a></p>
+        <p class="readmore"><a href="http://www.solitarystarsky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/">阅读全文</a></p>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://SolitaryStarSky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E6%8B%AC%E5%8F%B7%E5%8C%B9%E9%85%8D/" title="栈实现括号匹配">栈实现括号匹配</a>
+                <a href="http://www.solitarystarsky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E6%8B%AC%E5%8F%B7%E5%8C%B9%E9%85%8D/" title="栈实现括号匹配">栈实现括号匹配</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
@@ -183,7 +183,7 @@
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a></span>
+            <span class="meta-category"><a href='http://www.solitarystarsky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a></span>
             
         </div>
         
@@ -193,13 +193,13 @@
 #include&lt;iostream&gt;#include&lt;stack&gt;using namespace std;stack&lt;int&gt;st;int main(){char x;int flag,a,b;while(cin&gt;&gt;x){if(x==&#39;(&#39;){st.push(x);}if(x==&#39;)&#39;){st.pop();}if(st.empty()){flag=1;}else {flag=0;}}if(flag){cout&lt;&lt;&#34;1&#34;&lt;&lt;endl;}else {cout&lt;&lt;&#34;0&#34;&lt;&lt;endl;}return 0;} 自己手写的栈功能：
 #include&lt;iostream&gt;using namespace std;const int maxsize=100;typedef char datatype;typedef char ElemType;typedef struct{datatype data[maxsize];int top;}sqstack; void init_sqstack(sqstack *sq){sq-&gt;top=-1;}int empty(sqstack *sq){if(sq-&gt;top==-1){return 1;}else return 0;}int push_sqstack(sqstack *sq,datatype x){if(sq-&gt;top==maxsize-1){cout&lt;&lt;&#34;栈满，不能进栈!……
         </div>
-        <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E6%8B%AC%E5%8F%B7%E5%8C%B9%E9%85%8D/">阅读全文</a></p>
+        <p class="readmore"><a href="http://www.solitarystarsky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E6%8B%AC%E5%8F%B7%E5%8C%B9%E9%85%8D/">阅读全文</a></p>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://SolitaryStarSky.github.io/post/%E7%9A%AE%E5%85%8B%E5%AE%9A%E7%90%86%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/" title="皮克定理及其应用">皮克定理及其应用</a>
+                <a href="http://www.solitarystarsky.github.io/post/%E7%9A%AE%E5%85%8B%E5%AE%9A%E7%90%86%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/" title="皮克定理及其应用">皮克定理及其应用</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
@@ -209,7 +209,7 @@
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E9%A1%B9'>数学杂项</a></span>
+            <span class="meta-category"><a href='http://www.solitarystarsky.github.io/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E9%A1%B9'>数学杂项</a></span>
             
         </div>
         
@@ -218,13 +218,13 @@
 A lattice point is an ordered pair (x,y) where x and y are both integers. Given the coordinates of the vertices of a triangle(which happen to be lattice points), you are to count the number of lattice points which lie completely inside of the triangle(points on the edges or vertices of the triangle do not count).
 4.2 Input The input test file will contain multiple test cases.……
         </div>
-        <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E7%9A%AE%E5%85%8B%E5%AE%9A%E7%90%86%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/">阅读全文</a></p>
+        <p class="readmore"><a href="http://www.solitarystarsky.github.io/post/%E7%9A%AE%E5%85%8B%E5%AE%9A%E7%90%86%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/">阅读全文</a></p>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E8%A1%A8%E4%B9%8B%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%8A%A0%E6%B3%95/" title="链表之多项式加法">链表之多项式加法</a>
+                <a href="http://www.solitarystarsky.github.io/post/%E9%93%BE%E8%A1%A8%E4%B9%8B%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%8A%A0%E6%B3%95/" title="链表之多项式加法">链表之多项式加法</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
@@ -234,7 +234,7 @@ A lattice point is an ordered pair (x,y) where x and y are both integers. Given 
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a></span>
+            <span class="meta-category"><a href='http://www.solitarystarsky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a></span>
             
         </div>
         
@@ -242,13 +242,13 @@ A lattice point is an ordered pair (x,y) where x and y are both integers. Given 
             数据结构上机课的一次作业： 实现多项式的加法。开始并没有立刻做出来，主要原因是用insert插入的时候的i值没有把握好，以及当值两个链表中的指数相等的时候的处理没有到位。后来经过一番修改后，功能都得以实现。
 当天晚上学习了一下怎么放图片博客，终于万事俱备，开始写博客啦 #include &lt;iostream&gt;using namespace std;typedef int datatype;typedef int index;typedef struct node* pointer;struct node {datatype data;index ind;pointer next;};typedef pointer lklist;lklist init() {pointer head;head = new node;head-&gt;next = NULL;return head;}lklist create(lklist head) {pointer rear, s;int a,b;rear = head;while (cin &gt;&gt; a &gt;&gt; b &amp;&amp; (a != -1 &amp;&amp; b !……
         </div>
-        <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E8%A1%A8%E4%B9%8B%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%8A%A0%E6%B3%95/">阅读全文</a></p>
+        <p class="readmore"><a href="http://www.solitarystarsky.github.io/post/%E9%93%BE%E8%A1%A8%E4%B9%8B%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%8A%A0%E6%B3%95/">阅读全文</a></p>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://SolitaryStarSky.github.io/post/gcd%E4%B8%8Elcm/" title="GCD与LCM">GCD与LCM</a>
+                <a href="http://www.solitarystarsky.github.io/post/gcd%E4%B8%8Elcm/" title="GCD与LCM">GCD与LCM</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
@@ -258,7 +258,7 @@ A lattice point is an ordered pair (x,y) where x and y are both integers. Given 
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='https://SolitaryStarSky.github.io/categories/%E7%AE%97%E6%B3%95'>算法</a></span>
+            <span class="meta-category"><a href='http://www.solitarystarsky.github.io/categories/%E7%AE%97%E6%B3%95'>算法</a></span>
             
         </div>
         
@@ -270,7 +270,7 @@ LCM算法则是在GCD的基础上算出两数的最小公倍数
 GCD给出了上述第二种互换的代码实现：
 inline int gcd(int a,int b){return !b? a:gcd(b,a%b);} inline int lcm(int a,int b){return a/gcd(a,b)*b;}……
         </div>
-        <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/gcd%E4%B8%8Elcm/">阅读全文</a></p>
+        <p class="readmore"><a href="http://www.solitarystarsky.github.io/post/gcd%E4%B8%8Elcm/">阅读全文</a></p>
     </article>
     
     
@@ -280,17 +280,17 @@ inline int gcd(int a,int b){return !b? a:gcd(b,a%b);} inline int lcm(int a,in
 <ol class="page-navigator">
     
     <li class="prev">
-        <a href="https://SolitaryStarSky.github.io/">上一页</a>
+        <a href="http://www.solitarystarsky.github.io/">上一页</a>
     </li>
     
 
     
     <li >
-        <a href="https://SolitaryStarSky.github.io/">1</a>
+        <a href="http://www.solitarystarsky.github.io/">1</a>
     </li>
     
     <li  class="current">
-        <a href="https://SolitaryStarSky.github.io/page/2/">2</a>
+        <a href="http://www.solitarystarsky.github.io/page/2/">2</a>
     </li>
     
 
@@ -308,7 +308,7 @@ inline int gcd(int a,int b){return !b? a:gcd(b,a%b);} inline int lcm(int a,in
         <form id="search" action='//www.google.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
       
       <input type="text" name="q" maxlength="20" placeholder="Search">
-      <input type="hidden" name="sitesearch" value="https://SolitaryStarSky.github.io">
+      <input type="hidden" name="sitesearch" value="http://www.solitarystarsky.github.io">
       <button type="submit" class="submit icon-search"></button>
 </form>
     </section>
@@ -318,43 +318,43 @@ inline int gcd(int a,int b){return !b? a:gcd(b,a%b);} inline int lcm(int a,in
 <ul class="widget-list">
     
     <li>
-        <a href="https://SolitaryStarSky.github.io/post/tomcat%E4%B8%8B%E5%86%99servlet%E4%B8%AD%E6%96%87%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E7%9A%84%E5%9D%91/" title="Tomcat下写Servlet中文编译错误的坑">Tomcat下写Servlet中文编译错误的坑</a>
+        <a href="http://www.solitarystarsky.github.io/post/tomcat%E4%B8%8B%E5%86%99servlet%E4%B8%AD%E6%96%87%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E7%9A%84%E5%9D%91/" title="Tomcat下写Servlet中文编译错误的坑">Tomcat下写Servlet中文编译错误的坑</a>
     </li>
     
     <li>
-        <a href="https://SolitaryStarSky.github.io/post/kmp%E7%AE%97%E6%B3%95/" title="KMP算法">KMP算法</a>
+        <a href="http://www.solitarystarsky.github.io/post/kmp%E7%AE%97%E6%B3%95/" title="KMP算法">KMP算法</a>
     </li>
     
     <li>
-        <a href="https://SolitaryStarSky.github.io/post/bf%E7%AE%97%E6%B3%95/" title="BF算法">BF算法</a>
+        <a href="http://www.solitarystarsky.github.io/post/bf%E7%AE%97%E6%B3%95/" title="BF算法">BF算法</a>
     </li>
     
     <li>
-        <a href="https://SolitaryStarSky.github.io/post/7-11%E9%97%AE%E9%A2%98/" title="7 11问题">7 11问题</a>
+        <a href="http://www.solitarystarsky.github.io/post/7-11%E9%97%AE%E9%A2%98/" title="7 11问题">7 11问题</a>
     </li>
     
     <li>
-        <a href="https://SolitaryStarSky.github.io/post/poj-1426-find-the-multiple/" title="poj 1426 Find The Multiple">poj 1426 Find The Multiple</a>
+        <a href="http://www.solitarystarsky.github.io/post/poj-1426-find-the-multiple/" title="poj 1426 Find The Multiple">poj 1426 Find The Multiple</a>
     </li>
     
     <li>
-        <a href="https://SolitaryStarSky.github.io/post/bfs%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/" title="BFS————广度优先搜索">BFS————广度优先搜索</a>
+        <a href="http://www.solitarystarsky.github.io/post/bfs%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/" title="BFS————广度优先搜索">BFS————广度优先搜索</a>
     </li>
     
     <li>
-        <a href="https://SolitaryStarSky.github.io/post/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/" title="归并排序">归并排序</a>
+        <a href="http://www.solitarystarsky.github.io/post/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/" title="归并排序">归并排序</a>
     </li>
     
     <li>
-        <a href="https://SolitaryStarSky.github.io/post/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%85%B6%E7%94%9F%E6%88%90/" title="哈夫曼树及其生成">哈夫曼树及其生成</a>
+        <a href="http://www.solitarystarsky.github.io/post/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%85%B6%E7%94%9F%E6%88%90/" title="哈夫曼树及其生成">哈夫曼树及其生成</a>
     </li>
     
     <li>
-        <a href="https://SolitaryStarSky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E7%94%9F%E6%88%90/" title="二叉树的层序生成">二叉树的层序生成</a>
+        <a href="http://www.solitarystarsky.github.io/post/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E7%94%9F%E6%88%90/" title="二叉树的层序生成">二叉树的层序生成</a>
     </li>
     
     <li>
-        <a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F/" title="链式前向星">链式前向星</a>
+        <a href="http://www.solitarystarsky.github.io/post/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F/" title="链式前向星">链式前向星</a>
     </li>
     
 </ul>
@@ -366,17 +366,17 @@ inline int gcd(int a,int b){return !b? a:gcd(b,a%b);} inline int lcm(int a,in
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
     
-    <li><a href="https://SolitaryStarSky.github.io/categories/java-web/">java web (1)</a></li>
+    <li><a href="http://www.solitarystarsky.github.io/categories/java-web/">java web (1)</a></li>
     
-    <li><a href="https://SolitaryStarSky.github.io/categories/%E5%88%B7%E9%A2%98/">刷题 (1)</a></li>
+    <li><a href="http://www.solitarystarsky.github.io/categories/%E5%88%B7%E9%A2%98/">刷题 (1)</a></li>
     
-    <li><a href="https://SolitaryStarSky.github.io/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E9%A1%B9/">数学杂项 (1)</a></li>
+    <li><a href="http://www.solitarystarsky.github.io/categories/%E6%95%B0%E5%AD%A6%E6%9D%82%E9%A1%B9/">数学杂项 (1)</a></li>
     
-    <li><a href="https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构 (9)</a></li>
+    <li><a href="http://www.solitarystarsky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构 (9)</a></li>
     
-    <li><a href="https://SolitaryStarSky.github.io/categories/%E6%9D%82%E8%B0%88/">杂谈 (1)</a></li>
+    <li><a href="http://www.solitarystarsky.github.io/categories/%E6%9D%82%E8%B0%88/">杂谈 (1)</a></li>
     
-    <li><a href="https://SolitaryStarSky.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (5)</a></li>
+    <li><a href="http://www.solitarystarsky.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (5)</a></li>
     
 </ul>
     </section>
@@ -385,29 +385,29 @@ inline int gcd(int a,int b){return !b? a:gcd(b,a%b);} inline int lcm(int a,in
         <h3 class="widget-title">标签</h3>
 <div class="tagcloud">
     
-    <a href="https://SolitaryStarSky.github.io/tags/bfs/">BFS</a>
+    <a href="http://www.solitarystarsky.github.io/tags/bfs/">BFS</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/java-web/">java web</a>
+    <a href="http://www.solitarystarsky.github.io/tags/java-web/">java web</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/%E4%B8%B2%E5%8C%B9%E9%85%8D/">串匹配</a>
+    <a href="http://www.solitarystarsky.github.io/tags/%E4%B8%B2%E5%8C%B9%E9%85%8D/">串匹配</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
+    <a href="http://www.solitarystarsky.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">哈夫曼树</a>
+    <a href="http://www.solitarystarsky.github.io/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">哈夫曼树</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/%E6%90%9C%E7%B4%A2/">搜索</a>
+    <a href="http://www.solitarystarsky.github.io/tags/%E6%90%9C%E7%B4%A2/">搜索</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/%E6%A0%88/">栈</a>
+    <a href="http://www.solitarystarsky.github.io/tags/%E6%A0%88/">栈</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/%E6%A0%91/">树</a>
+    <a href="http://www.solitarystarsky.github.io/tags/%E6%A0%91/">树</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/%E7%AE%97%E6%B3%95%E8%AF%BE%E4%B9%A0%E9%A2%98/">算法课习题</a>
+    <a href="http://www.solitarystarsky.github.io/tags/%E7%AE%97%E6%B3%95%E8%AF%BE%E4%B9%A0%E9%A2%98/">算法课习题</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F/">链式前向星</a>
+    <a href="http://www.solitarystarsky.github.io/tags/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F/">链式前向星</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/%E9%93%BE%E8%A1%A8/">链表</a>
+    <a href="http://www.solitarystarsky.github.io/tags/%E9%93%BE%E8%A1%A8/">链表</a>
     
-    <a href="https://SolitaryStarSky.github.io/tags/%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8/">静态链表</a>
+    <a href="http://www.solitarystarsky.github.io/tags/%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8/">静态链表</a>
     
 </div>
     </section>
@@ -432,7 +432,7 @@ inline int gcd(int a,int b){return !b? a:gcd(b,a%b);} inline int lcm(int a,in
     <section class="widget">
         <h3 class="widget-title">其它</h3>
         <ul class="widget-list">
-            <li><a href="https://SolitaryStarSky.github.io/index.xml">文章 RSS</a></li>
+            <li><a href="http://www.solitarystarsky.github.io/index.xml">文章 RSS</a></li>
         </ul>
     </section>
 </div>
@@ -441,7 +441,7 @@ inline int gcd(int a,int b){return !b? a:gcd(b,a%b);} inline int lcm(int a,in
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://SolitaryStarSky.github.io">孤星的天空的博客 By 孤星的天空</a>.
+        &copy; 2020 <a href="http://www.solitarystarsky.github.io">孤星的天空的博客 By 孤星的天空</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
         
