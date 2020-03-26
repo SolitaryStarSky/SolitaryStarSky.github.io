@@ -6,21 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>链表 | 孤星的天空的博客</title>
-    <meta property="og:title" content="链表 - 孤星的天空的博客">
+    <title>java web | 孤星的天空的博客</title>
+    <meta property="og:title" content="java web - 孤星的天空的博客">
     <meta property="og:type" content="article">
         
         
     <meta name="Keywords" content="孤星的天空，博客，游戏开发，C&#43;&#43;语言学习，算法">
-    <meta name="description" content="链表">
+    <meta name="description" content="java web">
         
     <meta name="author" content="孤星的天空">
-    <meta property="og:url" content="https://SolitaryStarSky.github.io/tags/%E9%93%BE%E8%A1%A8/">
+    <meta property="og:url" content="https://SolitaryStarSky.github.io/tags/java-web/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml+xml" href="https://SolitaryStarSky.github.io/tags/%E9%93%BE%E8%A1%A8/index.xml" title="孤星的天空的博客" />
+    <link rel="alternate" type="application/rss+xml+xml" href="https://SolitaryStarSky.github.io/tags/java-web/index.xml" title="孤星的天空的博客" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -69,7 +69,7 @@
     
     <h3 class="archive-title">
         包含标签
-        <span class="keyword">链表</span>
+        <span class="keyword">java web</span>
         的文章
     </h3>
     
@@ -78,24 +78,34 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://SolitaryStarSky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/">栈实现十进制转换二进制</a>
+                <a href="https://SolitaryStarSky.github.io/post/tomcat%E4%B8%8B%E5%86%99servlet%E4%B8%AD%E6%96%87%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E7%9A%84%E5%9D%91/">Tomcat下写Servlet中文编译错误的坑</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
-            2019年10月17日
+            2020年3月26日
         </date>
         
         <div class="post-meta meta-category">
             |
             
-            <a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a>
+            <a href='https://SolitaryStarSky.github.io/categories/java-web'>java web</a>
             
         </div>
         
         <div class="post-content">
-            思路分析： 只需要用一个变量来存储余数，并入栈即可。另外需要注意一下maxsize-1才是栈满；p.data[p.top]代表的是datatype x的值。 下面是代码实现：
-#include &lt;iostream&gt;using namespace std;const int maxsize = 16;typedef int datatype;typedef struct {datatype data[maxsize];int top;}sqstack;void init_sqstack(sqstack* sq) {sq-&gt;top = -1;}int empty_sqstack(sqstack* sq) {if (sq-&gt;top == -1)return 1;else return 0;}int push_sqstack(sqstack* sq, datatype x) {if (sq-&gt;top == maxsize - 1) {cout &lt;&lt; &#34;栈满，不能进栈！\n&#34;;return 0;}sq-&gt;data[++sq-&gt;top] = x;return 1;}int pop_sqstack(sqstack* sq, datatype* x) {if (sq-&gt;top == -1) {cout &lt;&lt; &#34;栈空，不能退栈!……
-            <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6/">阅读全文</a></p>
+            java web上机课作业延伸出的坑爹问题 今天老师要我们用记事本写一个Servlet.java理解一下Servlet的基本原理的实现过程
+于是乎，我看到了一个要求：代码中的符号应该修改为英文符号
+为什么中文就不可以呢？然后我尝试写了中文，迎面而来的是疯狂的翻车。百度看了一堆也是没有解决
+最终解决方案 
+坑点 由于是GBK编码，Notepad++中编码一定要选ANSI编码！！一定要选ANSI编码！！一定要选ANSI编码！！
+原因 在整个Servlet访问过程中牵扯到 浏览器,Tomcat,Java程序三者
+浏览器默认编码方式:gbk,
+Tomcat默认编码:iso-8859-1 ,
+java代码中的编码一般常用utf-8
+从Servlet传输数据到浏览器的过程是:Servlet &mdash;&gt; Tomcat &mdash;&gt; 浏览器
+因为只写了Servlet.java所以只能够在这之中控制Servlet和Tomcat与浏览器统一为GBK。
+核心代码 response.setContentType(&#34;text/html;charset=GBK&#34;); request.setCharacterEncoding(&#34;GBK&#34;); ……
+            <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/tomcat%E4%B8%8B%E5%86%99servlet%E4%B8%AD%E6%96%87%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E7%9A%84%E5%9D%91/">阅读全文</a></p>
         </div>
     </article>
     

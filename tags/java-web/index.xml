@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java web on 孤星的天空的博客</title>
+    <link>https://SolitaryStarSky.github.io/tags/java-web/</link>
+    <description>Recent content in java web on 孤星的天空的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 26 Mar 2020 17:26:58 +0800</lastBuildDate>
+    
+	<atom:link href="https://SolitaryStarSky.github.io/tags/java-web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tomcat下写Servlet中文编译错误的坑</title>
+      <link>https://SolitaryStarSky.github.io/post/tomcat%E4%B8%8B%E5%86%99servlet%E4%B8%AD%E6%96%87%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E7%9A%84%E5%9D%91/</link>
+      <pubDate>Thu, 26 Mar 2020 17:26:58 +0800</pubDate>
+      
+      <guid>https://SolitaryStarSky.github.io/post/tomcat%E4%B8%8B%E5%86%99servlet%E4%B8%AD%E6%96%87%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E7%9A%84%E5%9D%91/</guid>
+      <description>java web上机课作业延伸出的坑爹问题 今天老师要我们用记事本写一个Servlet.java理解一下Servlet的基本原理的实现过程
+于是乎，我看到了一个要求：代码中的符号应该修改为英文符号
+为什么中文就不可以呢？然后我尝试写了中文，迎面而来的是疯狂的翻车。百度看了一堆也是没有解决
+最终解决方案 
+坑点 由于是GBK编码，Notepad++中编码一定要选ANSI编码！！一定要选ANSI编码！！一定要选ANSI编码！！
+原因 在整个Servlet访问过程中牵扯到 浏览器,Tomcat,Java程序三者
+浏览器默认编码方式:gbk,
+Tomcat默认编码:iso-8859-1 ,
+java代码中的编码一般常用utf-8
+从Servlet传输数据到浏览器的过程是:Servlet &amp;mdash;&amp;gt; Tomcat &amp;mdash;&amp;gt; 浏览器
+因为只写了Servlet.java所以只能够在这之中控制Servlet和Tomcat与浏览器统一为GBK。
+核心代码 response.setContentType(&amp;#34;text/html;charset=GBK&amp;#34;); request.setCharacterEncoding(&amp;#34;GBK&amp;#34;); </description>
+    </item>
+    
+  </channel>
+</rss>

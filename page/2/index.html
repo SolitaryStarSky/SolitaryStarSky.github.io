@@ -69,6 +69,29 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://SolitaryStarSky.github.io/post/%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97/" title="顺序结构循环队列">顺序结构循环队列</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年11月13日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://SolitaryStarSky.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84'>数据结构</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            #include&lt;iostream&gt;using namespace std; typedef int datatype; const int maxsize = 100; typedef struct node { datatype data[maxsize]; int front, rear; }sqqueue; void init_sqqueue(sqqueue* lq) { lq-&gt;front = lq-&gt;rear = 0; cout &lt;&lt; &#34;创建队列成功&#34; &lt;&lt; endl; } int en_sqqueue(sqqueue* lq, datatype x) { if ((lq-&gt;rear + 1) % maxsize == lq-&gt;front) { cout &lt;&lt; &#34;队满，无法入队&#34; &lt;&lt; endl; return 0; } lq-&gt;rear = (lq-&gt;rear + 1) % maxsize; lq-&gt;data[lq-&gt;rear] = x; cout &lt;&lt; &#34;入队元素为&#34; &lt;&lt; x &lt;&lt; endl; return 1; } int de_sqqueue(sqqueue* lq, datatype* x) { if (lq-&gt;front == lq-&gt;rear) { cout &lt;&lt; &#34;队列为空&#34; &lt;&lt; endl; return 0; } lq-&gt;front = (lq-&gt;front + 1) % maxsize; *x = lq-&gt;data[lq-&gt;front]; cout &lt;&lt; &#34;出队元素为&#34; &lt;&lt; *x &lt;&lt; endl; return 1; } int empty_sqqueue(sqqueue* lq) { if (lq-&gt;front == lq-&gt;rear) { cout &lt;&lt; &#34;队空&#34; &lt;&lt; endl; return 1; } else { cout &lt;&lt; &#34;队不空&#34; &lt;&lt; endl; return 0; } } int main() { sqqueue* lq; datatype* x; x = new datatype; lq = new sqqueue; init_sqqueue(lq); empty_sqqueue(lq); en_sqqueue(lq, 100); en_sqqueue(lq, 200); empty_sqqueue(lq); de_sqqueue(lq, x); de_sqqueue(lq, x); empty_sqqueue(lq); return 0; } ……
+        </div>
+        <p class="readmore"><a href="https://SolitaryStarSky.github.io/post/%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E9%98%9F%E5%88%97/" title="链式队列">链式队列</a>
             </h1>
         </header>
@@ -288,6 +311,10 @@ inline int gcd(int a,int b){return !b? a:gcd(b,a%b);} inline int lcm(int a,in
 <ul class="widget-list">
     
     <li>
+        <a href="https://SolitaryStarSky.github.io/post/tomcat%E4%B8%8B%E5%86%99servlet%E4%B8%AD%E6%96%87%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF%E7%9A%84%E5%9D%91/" title="Tomcat下写Servlet中文编译错误的坑">Tomcat下写Servlet中文编译错误的坑</a>
+    </li>
+    
+    <li>
         <a href="https://SolitaryStarSky.github.io/post/kmp%E7%AE%97%E6%B3%95/" title="KMP算法">KMP算法</a>
     </li>
     
@@ -323,10 +350,6 @@ inline int gcd(int a,int b){return !b? a:gcd(b,a%b);} inline int lcm(int a,in
         <a href="https://SolitaryStarSky.github.io/post/%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F/" title="链式前向星">链式前向星</a>
     </li>
     
-    <li>
-        <a href="https://SolitaryStarSky.github.io/post/%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97/" title="顺序结构循环队列">顺序结构循环队列</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -335,6 +358,8 @@ inline int gcd(int a,int b){return !b? a:gcd(b,a%b);} inline int lcm(int a,in
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
+    
+    <li><a href="https://SolitaryStarSky.github.io/categories/java-web/">java web (1)</a></li>
     
     <li><a href="https://SolitaryStarSky.github.io/categories/%E5%88%B7%E9%A2%98/">刷题 (1)</a></li>
     
@@ -354,6 +379,8 @@ inline int gcd(int a,int b){return !b? a:gcd(b,a%b);} inline int lcm(int a,in
 <div class="tagcloud">
     
     <a href="https://SolitaryStarSky.github.io/tags/bfs/">BFS</a>
+    
+    <a href="https://SolitaryStarSky.github.io/tags/java-web/">java web</a>
     
     <a href="https://SolitaryStarSky.github.io/tags/%E4%B8%B2%E5%8C%B9%E9%85%8D/">串匹配</a>
     
